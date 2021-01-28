@@ -20,7 +20,7 @@
 <div class="logo">
 	<a href="index.php">
 		
-		<h2>Shopping Portal</h2>
+		<h2>SuperM.com</h2>
 
 	</a>
 </div>		
@@ -160,7 +160,7 @@ if(!empty($_SESSION['cart'])){
 				
 				<div class="clearfix"></div>
 					
-				<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continue Shooping</a>	
+				<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continuar comprando</a>	
 			</div><!-- /.cart-total-->
 					
 				
