@@ -2,28 +2,28 @@
 /*  GREEN Color
 /*===================================================================================*/
 a {
-  color: #abd07e;
+  color: #dd834f;
 }
 .show-theme-options:hover,
 .show-theme-options:focus {
-  background: #abd07e;
+  background: #dd834f;
 }
 .btn-primary:hover,
 .btn-black:hover,
 .btn-primary:focus,
 .btn-black:focus {
-  background: #abd07e;
+  background:#dd834f;
 }
 .top-bar .cnt-account ul > li a:hover,
 .top-bar .cnt-account ul > li a:focus {
-  color: #abd07e;
+  color:#dd834f;
 }
 .top-bar .cnt-block ul li a .caret {
-  color: #abd07e;
+  color:#dd834f;
 }
 .top-bar .cnt-block ul li .dropdown-menu li a:hover,
 .top-bar .cnt-block ul li .dropdown-menu li a:focus {
-  color: #abd07e;
+  color:#dd834f;
 }
 .main-header .top-search-holder .contact-row .icon {
   color: #abd07e;
