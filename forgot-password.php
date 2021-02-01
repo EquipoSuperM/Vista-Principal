@@ -94,6 +94,13 @@ return false;
 return true;
 }
 </script>
+<style type="text/css">
+  .contraseña{
+	color: #000;
+	
+  }
+  
+	</style>
 	</head>
     <body class="cnt-home">
 	
@@ -117,8 +124,8 @@ return true;
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">CASA</a></li>
-				<li class='active'>Has olvidado tu contraseña</li>
+				<li><a href="home.html">Inicio</a></li>
+				<li class='contraseña' >¿Has olvidado tu contraseña?</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -130,7 +137,7 @@ return true;
 			<div class="row">
 				<!-- Sign-in -->			
 <div class="col-md-6 col-sm-6 sign-in">
-	<h4 class="">Se te olvidó tu contraseña</h4>
+	<h4 class="contraseña">¿Se te olvidó tu contraseña?</h4>
 	<form class="register-form outer-top-xs" name="register" method="post">
 	<span style="color:red;" >
 <?php

@@ -107,7 +107,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 
 
 			<ul class="list-inline list-unstyled">
-				<li><a href="index.php">CASA</a></li>
+				<li><a href="index.php">Inicio</a></li>
 				<li><?php echo htmlentities($rw['catname']);?></a></li>
 				<li><?php echo htmlentities($rw['subcatname']);?></li>
 				<li class='active'><?php echo htmlentities($rw['pname']);?></li>
@@ -306,7 +306,7 @@ $num=mysqli_num_rows($rt);
 									</div>
 									<div class="col-sm-8">
 										<div class="reviews">
-											<a href="#" class="lnk">(<?php echo htmlentities($num);?> Reviews)</a>
+											<a href="#" class="lnk">(<?php echo htmlentities($num);?> Reseñas)</a>
 										</div>
 									</div>
 								</div><!-- /.row -->		
@@ -376,7 +376,7 @@ $num=mysqli_num_rows($rt);
 									<div class="col-sm-6">
 										<div class="price-box">
 											<span class="price">MNX. <?php echo htmlentities($row['productPrice']);?></span>
-											<span class="price-strike">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+											<span class="price-strike">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 										</div>
 									</div>
 
@@ -422,7 +422,7 @@ $num=mysqli_num_rows($rt);
 
 									<div class="col-sm-7">
 <?php if($row['productAvailability']=='In Stock'){?>
-										<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+										<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i>Añadir al Carrito</a>
 													<?php } else {?>
 							<div class="action" style="color:red"> Stock</div>
 					<?php } ?>
@@ -589,7 +589,8 @@ while($rvw=mysqli_fetch_array($qry))
 			$subcid=$row['subCategory']; } ?>
 				<!-- ============================================== UPSELL PRODUCTS ============================================== -->
 <section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">Realted Products </h3>
+	<h3 class="section-title">
+Productos relacionados </h3>
 	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
 	   
 		<?php 

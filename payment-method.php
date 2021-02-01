@@ -60,7 +60,7 @@ else{
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">CASA</a></li>
+				<li><a href="home.html">Inicio</a></li>
 				<li class='active'>Metodo de Pago</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->

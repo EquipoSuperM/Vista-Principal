@@ -139,7 +139,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<h4 class="info-box-heading orange">Gratis </h4>
 						</div>
 					</div>
-					<h6 class="text">Envío gratis $ 600.00</h6>	
+					<h6 class="text">Envío gratis $00.00</h6>	
 				</div>
 			</div><!-- .col -->
 

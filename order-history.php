@@ -74,7 +74,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">CASA</a></li>
+				<li><a href="#">Inicio</a></li>
 				<li class='active'>
 Carrito de compras</li>
 			</ul>

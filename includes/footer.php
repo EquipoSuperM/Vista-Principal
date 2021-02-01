@@ -59,7 +59,7 @@
 				<tbody>
 					<tr><td>Lunes - Viernes:</td><td class="pull-right">08:00am a 11:00pm</td></tr>
 					<tr><td>Sabados:</td><td class="pull-right">08:00am a 09:00pm </td></tr>
-					<tr><td>Domingos:</td><td class="pull-right">10:00 a 09:00pm</td></tr>
+					<tr><td>Domingos:</td><td class="pull-right">10:00am a 09:00pm</td></tr>
 				</tbody>
 			</table>
 		</div><!-- /.table-responsive -->

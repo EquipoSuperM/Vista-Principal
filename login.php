@@ -132,9 +132,12 @@ error:function (){}
 });
 }
 </script>
-
-
-
+<style type="text/css" >
+.contraseña{
+	color: #000;
+	align: left;
+  }
+</style>
 	</head>
     <body class="cnt-home">
 	
@@ -158,7 +161,7 @@ error:function (){}
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">CASA</a></li>
+				<li><a href="home.html">Inicio</a></li>
 				<li class='active'>Autenticación</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
@@ -191,7 +194,7 @@ echo htmlentities($_SESSION['errmsg']="");
 		 <input type="password" name="password" class="form-control unicase-form-control text-input" id="exampleInputPassword1" >
 		</div>
 		<div class="radio outer-xs">
-		  	<a href="forgot-password.php" class="forgot-password pull-right">¿Olvidaste tu contraseña?</a>
+		  	<a href="forgot-password.php" class="contraseña">¿Olvidaste tu contraseña?</a>
 		</div>
 	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Iniciar Sesión</button>
 	</form>					

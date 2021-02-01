@@ -12,7 +12,7 @@ echo "<span style='color:red'> El email ya existe .</span>";
 } else{
 	
 	echo "<span style='color:green'> 
-	Correo electrónico disponible para registro .</span>";
+	Correo electrónico disponible para registro.</span>";
  echo "<script>$('#submit').prop('disabled',false);</script>";
 }
 }
