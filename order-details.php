@@ -16,7 +16,8 @@ include('includes/config.php');
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Order History</title>
+	    <title>
+Historial de pedidos</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
@@ -68,7 +69,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
+				<li><a href="#">CASA</a></li>
 				<li class='active'>SuperM.com</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
@@ -87,15 +88,15 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			<thead>
 				<tr>
 					<th class="cart-romove item">#</th>
-					<th class="cart-description item">Image</th>
-					<th class="cart-product-name item">Product Name</th>
+					<th class="cart-description item">Imagen</th>
+					<th class="cart-product-name item">Nombre del Producto</th>
 			
-					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Price Per unit</th>
-					<th class="cart-total item">Grandtotal</th>
-					<th class="cart-total item">Payment Method</th>
-					<th class="cart-description item">Order Date</th>
-					<th class="cart-total last-item">Action</th>
+					<th class="cart-qty item">Cantidad</th>
+					<th class="cart-sub-total item">Precio por articulo</th>
+					<th class="cart-total item">Total</th>
+					<th class="cart-total item">Metodo de pago</th>
+					<th class="cart-description item">Fecha de Pedido</th>
+					<th class="cart-total last-item">Comprar</th>
 				</tr>
 			</thead><!-- /thead -->
 			
@@ -138,7 +139,8 @@ while($row=mysqli_fetch_array($query))
 					Track</td>
 				</tr>
 <?php $cnt=$cnt+1;} } else { ?>
-				<tr><td colspan="8">Either order id or  Registered email id is invalid</td></tr>
+				<tr><td colspan="8">
+El ID de pedido o el ID de correo electrónico registrado no son válidos</td></tr>
 				<?php } ?>
 			</tbody><!-- /tbody -->
 		</table><!-- /table -->
