@@ -1,4 +1,16 @@
+
+
+<style type="text/css">
+ 
+  .hola{
+	background:  #FFB039;
+  }
+  
+    </style>
+
+
 <div class="header-nav animate-dropdown">
+    <div class="hola">
     <div class="container">
         <div class="yamm navbar navbar-default" role="navigation">
             <div class="navbar-header">
@@ -14,16 +26,16 @@
 	<div class="nav-outer">
 		<ul class="nav navbar-nav">
 			<li class="active dropdown yamm-fw">
-				<a href="index.php" data-hover="dropdown" class="dropdown-toggle">Casa</a>
+		<a href="index.php" data-hover="dropdown" class="dropdown-toggle" ><i class="fa fa-home" >	</i> Inicio</a></span>
 				
-			</li>
-              <?php $sql=mysqli_query($con,"select id,categoryName  from category limit 6");
+			</li> 
+              <?php $sql=mysqli_query($con,"select id,categoryName  from category limit 6"); 
 while($row=mysqli_fetch_array($sql))
 {
-    ?>
+    ?>     
 
-			<li class="dropdown yamm">
-				<a href="category.php?cid=<?php echo $row['id'];?>"> <?php echo $row['categoryName'];?></a>
+			<li class="dropdown yamm"> 
+				<a href="category.php?cid=<?php echo $row['id'];?>"> <i class="fa fa-list" ></i> <?php echo $row['categoryName'];?></a>
 			
 			</li>
 			<?php } ?>
@@ -34,7 +46,7 @@ while($row=mysqli_fetch_array($sql))
 	</div>
 </div>
 
-
+                 </div>
             </div>
         </div>
     </div>

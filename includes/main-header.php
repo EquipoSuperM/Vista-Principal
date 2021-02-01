@@ -24,8 +24,9 @@
     color: #000;
   }
   .main-header{
-	background:  #FFB039;
+	background:  #FFD856;
   }
+  
     </style>
 	<div class="main-header">
 		<div class="container">
@@ -45,7 +46,7 @@
     <form name="search" method="post" action="search-result.php">
         <div class="control-group">
 
-            <input class="search-field" placeholder="Search here..." name="product" required="required" />
+            <input class="search-field" placeholder="Buscar Producto" name="product" required="required" />
 
             <button class="search-button" type="submit" name="search"></button>    
 
@@ -63,9 +64,9 @@ if(!empty($_SESSION['cart'])){
 		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
 			<div class="items-cart-inner">
 				<div class="total-price-basket">
-					<span class="lbl">cart -</span>
+					<span class="lbl">Carrito -</span>
 					<span class="total-price">
-						<span class="sign">Rs.</span>
+						<span class="sign">MXN</span>
 						<span class="value"><?php echo $_SESSION['tp']; ?></span>
 					</span>
 				</div>
@@ -127,7 +128,7 @@ if(!empty($_SESSION['cart'])){
 			
 				<div class="clearfix"></div>
 					
-				<a href="my-cart.php" class="btn btn-upper btn-primary btn-block m-t-20">My Cart</a>	
+				<a href="my-cart.php" class="btn btn-upper btn-primary btn-block m-t-20">Mi Carrito</a>	
 			</div><!-- /.cart-total-->
 					
 				
@@ -139,9 +140,9 @@ if(!empty($_SESSION['cart'])){
 		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
 			<div class="items-cart-inner">
 				<div class="total-price-basket">
-					<span class="lbl">cart -</span>
+					<span class="lbl">Carrito-</span>
 					<span class="total-price">
-						<span class="sign">Rs.</span>
+						<span class="sign">$</span>
 						<span class="value">00.00</span>
 					</span>
 				</div>

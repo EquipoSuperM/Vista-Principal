@@ -7,11 +7,18 @@
   .cnt-account{
     background: #FFD856; 
   }
-  .top-bar animate-dropdown{
+  .encabezado{
+	background:  #FFD856;
+	height:-50px;
+	border-radius: 0em;
+    margin: 0em auto;
+  }
+  .cnt-block{
 	background:  #FFB039;
   }
     </style>
 <div class="top-bar animate-dropdown">
+  <div class= "encabezado">
 	<div class="container">
 		<div class="header-top-inner">
 			<div class="cnt-account">
@@ -19,7 +26,7 @@
 
 <?php if(strlen($_SESSION['login']))
     {   ?>
-				<li><a href="#"><i class="icon fa fa-user"></i>Bienvenidos -<?php echo htmlentities($_SESSION['username']);?></a></li>
+				<li><a href="#"><i class="icon fa fa-user"></i>Bienvenido -<?php echo htmlentities($_SESSION['username']);?></a></li>
 				<?php } ?>
 
 					<li><a href="my-account.php"><i class="icon fa fa-user"></i>Mi cuenta</a></li>
@@ -27,7 +34,7 @@
 					<li><a href="my-cart.php"><i class="icon fa fa-shopping-cart"></i>Mi carrito</a></li>
 					<?php if(strlen($_SESSION['login'])==0)
     {   ?>
-                    <li><a href="login.php"><i class="icon fa fa-sign-in"></i>Iniciar</a></li>
+                    <li><a href="login.php"><i class="icon fa fa-sign-in"></i>Iniciar Sesion</a></li>
 <?php }
 else{ ?>
 	
@@ -50,4 +57,5 @@ else{ ?>
 			<div class="clearfix"></div>
 		</div><!-- /.header-top-inner -->
 	</div><!-- /.container -->
+</div> <!-- encabezado
 </div><!-- /.header-top -->
