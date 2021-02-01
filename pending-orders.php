@@ -28,7 +28,8 @@ else{
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Pending Order History</title>
+	    <title>
+Historial de pedidos pendientes</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
@@ -82,7 +83,7 @@ else{
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
+				<li><a href="#">CASA</a></li>
 				<li class='active'>SuperM.com</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
@@ -99,18 +100,18 @@ else{
 
 		<table class="table table-bordered">
 			<thead>
-				<tr>
+			<tr>
 					<th class="cart-romove item">#</th>
-					<th class="cart-description item">Image</th>
-					<th class="cart-product-name item">Product Name</th>
+					<th class="cart-description item">Imagen</th>
+					<th class="cart-product-name item">Nombre del Producto</th>
 			
-					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Price Per unit</th>
-						<th class="cart-sub-total item">Shiping Charge</th>
-					<th class="cart-total">Grandtotal</th>
-					<th class="cart-total item">Payment Method</th>
-					<th class="cart-description item">Order Date</th>
-					<th class="cart-total last-item">Action</th>
+					<th class="cart-qty item">Cantidad</th>
+					<th class="cart-sub-total item">Precio por articulo</th>
+					<th class="cart-sub-total item">Costo de envio</th>
+					<th class="cart-total item">Total</th>
+					<th class="cart-total item">Metodo de Pago</th>
+					<th class="cart-description item">Fecha del Pedido</th>
+					<th class="cart-total last-item">Comprar</th>
 				</tr>
 			</thead><!-- /thead -->
 			
@@ -146,19 +147,20 @@ while($row=mysqli_fetch_array($query))
 					<td class="cart-product-sub-total"><?php echo $row['paym']; ?>  </td>
 					<td class="cart-product-sub-total"><?php echo $row['odate']; ?>  </td>
 					
-					<td><a href="pending-orders.php?id=<?php echo $row['oid']; ?> ">Delete</td>
+					<td><a href="pending-orders.php?id=<?php echo $row['oid']; ?> ">Eliminar</td>
 				</tr>
 <?php $cnt=$cnt+1;} ?>
 <tr>
 	<td colspan="9"><div class="cart-checkout-btn pull-right">
-							<button type="submit" name="ordersubmit" class="btn btn-primary"><a href="payment-method.php">PROCCED To Payment</a></button>
+							<button type="submit" name="ordersubmit" class="btn btn-primary"><a href="payment-method.php">Proceder a Pagar</a></button>
 						
 						</div></td>
 
 </tr>
 <?php } else {?>
 <tr>
-<td colspan="10" align="center"><h4>No Result Found</h4></td>
+<td colspan="10" align="center"><h4>
+No se han encontrado resultados</h4></td>
 </tr>
 <?php } ?>
 
