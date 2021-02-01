@@ -12,10 +12,11 @@ if(isset($_POST['submit'])){
 
 			}
 		}
-			echo "<script>alert('Your Cart hasbeen Updated');</script>";
+			echo "<script>alert('
+			Su carrito se ha actualizado');</script>";
 		}
 	}
-// Code for Remove a Product from Cart
+
 if(isset($_POST['remove_code']))
 	{
 
@@ -24,10 +25,11 @@ if(!empty($_SESSION['cart'])){
 			
 				unset($_SESSION['cart'][$key]);
 		}
-			echo "<script>alert('Your Cart has been Updated');</script>";
+			echo "<script>alert('
+			Su carrito se ha actualizado');</script>";
 	}
 }
-// code for insert product in order table
+
 
 
 if(isset($_POST['ordersubmit'])) 
@@ -54,7 +56,7 @@ header('location:payment-method.php');
 }
 }
 
-// code for billing address updation
+
 	if(isset($_POST['update']))
 	{
 		$baddress=$_POST['billingaddress'];
@@ -64,12 +66,12 @@ header('location:payment-method.php');
 		$query=mysqli_query($con,"update users set billingAddress='$baddress',billingState='$bstate',billingCity='$bcity',billingPincode='$bpincode' where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Billing Address has been updated');</script>";
+echo "<script>alert('
+Se actualizó la dirección de facturación');</script>";
 		}
 	}
 
 
-// code for Shipping address updation
 	if(isset($_POST['shipupdate']))
 	{
 		$saddress=$_POST['shippingaddress'];
@@ -79,7 +81,8 @@ echo "<script>alert('Billing Address has been updated');</script>";
 		$query=mysqli_query($con,"update users set shippingAddress='$saddress',shippingState='$sstate',shippingCity='$scity',shippingPincode='$spincode' where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Shipping Address has been updated');</script>";
+echo "<script>alert('
+La dirección de envío se ha actualizado');</script>";
 		}
 	}
 
@@ -97,7 +100,7 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>My Cart</title>
+	    <title>Mi Carrito</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
@@ -129,30 +132,24 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon.ico">
 
-		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
+
 
 	</head>
     <body class="cnt-home">
 	
 		
 	
-		<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1">
 <?php include('includes/top-header.php');?>
 <?php include('includes/main-header.php');?>
 <?php include('includes/menu-bar.php');?>
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Shopping Cart</li>
+				<li><a href="#">CASA</a></li>
+				<li class='active'>Carrito de compras</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -171,14 +168,14 @@ if(!empty($_SESSION['cart'])){
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th class="cart-romove item">Remove</th>
-					<th class="cart-description item">Image</th>
-					<th class="cart-product-name item">Product Name</th>
+					<th class="cart-romove item">Eliminar</th>
+					<th class="cart-description item">Imagen</th>
+					<th class="cart-product-name item">Nombre del Producto</th>
 			
-					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Price Per unit</th>
-					<th class="cart-sub-total item">Shipping Charge</th>
-					<th class="cart-total last-item">Grandtotal</th>
+					<th class="cart-qty item">Cantidad</th>
+					<th class="cart-sub-total item">Precio por articulo</th>
+					<th class="cart-sub-total item">Costo de envio</th>
+					<th class="cart-total last-item">Total</th>
 				</tr>
 			</thead><!-- /thead -->
 			<tfoot>
@@ -186,7 +183,7 @@ if(!empty($_SESSION['cart'])){
 					<td colspan="7">
 						<div class="shopping-cart-btn">
 							<span class="">
-								<a href="index.php" class="btn btn-upper btn-primary outer-left-xs">Continue Shopping</a>
+								<a href="index.php" class="btn btn-upper btn-primary outer-left-xs">Seguir Comprando</a>
 								<input type="submit" name="submit" value="Update shopping cart" class="btn btn-upper btn-primary pull-right outer-right-xs">
 							</span>
 						</div><!-- /.shopping-cart-btn -->
@@ -273,7 +270,7 @@ $_SESSION['pid']=$pdtid;
 		<thead>
 			<tr>
 				<th>
-					<span class="estimate-title">Shipping Address</span>
+					<span class="estimate-title">Dirección de Envío</span>
 				</th>
 			</tr>
 		</thead>
@@ -288,27 +285,27 @@ while($row=mysqli_fetch_array($query))
 ?>
 
 <div class="form-group">
-					    <label class="info-title" for="Billing Address">Billing Address<span>*</span></label>
+					    <label class="info-title" for="Billing Address">Dirección de Envio<span>*</span></label>
 					    <textarea class="form-control unicase-form-control text-input"  name="billingaddress" required="required"><?php echo $row['billingAddress'];?></textarea>
 					  </div>
 
 
 
 						<div class="form-group">
-					    <label class="info-title" for="Billing State ">Billing State  <span>*</span></label>
+					    <label class="info-title" for="Billing State ">Estado de cuenta<span>*</span></label>
 			 <input type="text" class="form-control unicase-form-control text-input" id="bilingstate" name="bilingstate" value="<?php echo $row['billingState'];?>" required>
 					  </div>
 					  <div class="form-group">
-					    <label class="info-title" for="Billing City">Billing City <span>*</span></label>
+					    <label class="info-title" for="Billing City">Ciudad de envio<span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="billingcity" name="billingcity" required="required" value="<?php echo $row['billingCity'];?>" >
 					  </div>
  <div class="form-group">
-					    <label class="info-title" for="Billing Pincode">Billing Pincode <span>*</span></label>
+					    <label class="info-title" for="Billing Pincode">Código PIN de facturación <span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="billingpincode" name="billingpincode" required="required" value="<?php echo $row['billingPincode'];?>" >
 					  </div>
 
 
-					  <button type="submit" name="update" class="btn-upper btn btn-primary checkout-page-button">Update</button>
+					  <button type="submit" name="update" class="btn-upper btn btn-primary checkout-page-button">Actualizar</button>
 			
 					<?php } ?>
 		
@@ -325,7 +322,7 @@ while($row=mysqli_fetch_array($query))
 		<thead>
 			<tr>
 				<th>
-					<span class="estimate-title">Billing Address</span>
+					<span class="estimate-title">Dirección de Envio</span>
 				</th>
 			</tr>
 		</thead>
@@ -340,27 +337,28 @@ while($row=mysqli_fetch_array($query))
 ?>
 
 <div class="form-group">
-					    <label class="info-title" for="Shipping Address">Shipping Address<span>*</span></label>
+					    <label class="info-title" for="Shipping Address">Dirección de Envío<span>*</span></label>
 					    <textarea class="form-control unicase-form-control text-input"  name="shippingaddress" required="required"><?php echo $row['shippingAddress'];?></textarea>
 					  </div>
 
 
 
 						<div class="form-group">
-					    <label class="info-title" for="Billing State ">Shipping State  <span>*</span></label>
+					    <label class="info-title" for="Billing State ">Estado de cuenta<span>*</span></label>
 			 <input type="text" class="form-control unicase-form-control text-input" id="shippingstate" name="shippingstate" value="<?php echo $row['shippingState'];?>" required>
 					  </div>
 					  <div class="form-group">
-					    <label class="info-title" for="Billing City">Shipping City <span>*</span></label>
+					    <label class="info-title" for="Billing City">Ciudad de envío<span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="shippingcity" name="shippingcity" required="required" value="<?php echo $row['shippingCity'];?>" >
 					  </div>
  <div class="form-group">
-					    <label class="info-title" for="Billing Pincode">Shipping Pincode <span>*</span></label>
+					    <label class="info-title" for="Billing Pincode">
+   Código PIN de envío <span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="shippingpincode" name="shippingpincode" required="required" value="<?php echo $row['shippingPincode'];?>" >
 					  </div>
 
 
-					  <button type="submit" name="shipupdate" class="btn-upper btn btn-primary checkout-page-button">Update</button>
+					  <button type="submit" name="shipupdate" class="btn-upper btn btn-primary checkout-page-button">Actualizar</button>
 					<?php } ?>
 
 		
@@ -378,7 +376,7 @@ while($row=mysqli_fetch_array($query))
 				<th>
 					
 					<div class="cart-grand-total">
-						Grand Total<span class="inner-left-md"><?php echo $_SESSION['tp']="$totalprice". ".00"; ?></span>
+						 Total<span class="inner-left-md"><?php echo $_SESSION['tp']="$totalprice". ".00"; ?></span>
 					</div>
 				</th>
 			</tr>
@@ -387,7 +385,7 @@ while($row=mysqli_fetch_array($query))
 				<tr>
 					<td>
 						<div class="cart-checkout-btn pull-right">
-							<button type="submit" name="ordersubmit" class="btn btn-primary">PROCCED TO CHEKOUT</button>
+							<button type="submit" name="ordersubmit" class="btn btn-primary">Proceder a Verificar</button>
 						
 						</div>
 					</td>
