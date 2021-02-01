@@ -1,5 +1,5 @@
 var Index = function () {
-    // function to initiate Chart 1
+    
     var runChart1 = function () {
         function randValue() {
             return (Math.floor(Math.random() * (1 + 40 - 20))) + 20;

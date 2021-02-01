@@ -1,12 +1,8 @@
-/* ---------------------------------------------------------------------- */
-/*	Import fonts
-/* ---------------------------------------------------------------------- */
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200,100,500,600,700,800,900);
 
-/* ---------------------------------------------------------------------- */
-/*	Basic Elements & Classes
-/* ---------------------------------------------------------------------- */
+
 body {
 	color: #000000;
 	direction: ltr;
@@ -1085,7 +1081,7 @@ li.dropdown.current-user .dropdown-menu li a {
 }
 .pagination.pagination-green li a:hover, .pagination-green .pagination li a a:hover {
 	background: #CEF3C5;
-	color: #222222;
+	color: #fc4902;
 	cursor: pointer;
 }
 
@@ -1093,7 +1089,7 @@ li.dropdown.current-user .dropdown-menu li a {
 	border: none !important;
 }
 
-.pagination.pagination-green li.disabled a, .pagination-green .pagination li.disabled a,{
+.pagination.pagination-green li.disabled a, .pagination-green .pagination li.disabled a{
 color: #AAAAAA !important;
 }
 .pagination.pagination-green li.disabled a:hover, .pagination-green .pagination li.disabled a:hover, .pagination.pagination-green li.disabled a:focus, .pagination-green .pagination li.disabled a:focus {
@@ -1151,9 +1147,7 @@ color: #AAAAAA !important;
 .pagination.pagination-bricky li.disabled [class^="fa-"], .pagination.pagination-bricky li.disabled [class*=" fa-"] {
 	opacity: 0.5;
 }
-/* ---------------------------------------------------------------------- */
-/*	ToDo List
-/* ---------------------------------------------------------------------- */
+
 .todo {
 	list-style: none;
 	margin: 0;
@@ -1185,9 +1179,7 @@ color: #AAAAAA !important;
 	right: 10px;
 	padding: 6px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Activities
-/* ---------------------------------------------------------------------- */
+
 .activities {
 	list-style: none outside none;
 	margin: 0;
@@ -1223,9 +1215,7 @@ color: #AAAAAA !important;
 	top: 30px;
 	color: #CCCCCC;
 }
-/* ---------------------------------------------------------------------- */
-/*	Main Container and main content elements
-/* ---------------------------------------------------------------------- */
+
 .main-container {
 	margin-top: 48px;
 }
@@ -1247,9 +1237,7 @@ color: #AAAAAA !important;
 .footer-fixed .main-content .container{
 	margin-bottom:22px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Main Navigation
-/* ---------------------------------------------------------------------- */
+
 .main-navigation {
 	padding: 0;
 	max-height: none !important;
@@ -1313,7 +1301,7 @@ ul.main-navigation-menu li.open > a > .icon-arrow:before {
 ul.main-navigation-menu > li > a:hover .icon-arrow, ul.main-navigation-menu > li.open > a .icon-arrow {
 	opacity: 1;
 }
-/* 2nd level sub menu */
+
 ul.main-navigation-menu li > ul.sub-menu {
 	clear: both;
 	list-style: none;
@@ -1344,7 +1332,7 @@ ul.main-navigation-menu li > ul.sub-menu > li > a {
 ul.main-navigation-menu > li > ul.sub-menu li > a .icon-arrow {
 	margin-right: 22px;
 }
-/* 3rd level sub menu */
+
 ul.main-navigation-menu > li > ul.sub-menu li > ul.sub-menu {
 	margin: 0;
 }
@@ -1376,7 +1364,7 @@ ul.main-navigation-menu > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu
 	margin-left: -15px !important;
 	margin-right: -15px !important;
 	padding: 0 15px !important;
-	background: #FFFFFF;
+	background: #f19c63;
 }
 .horizontal-menu ul.nav li.open > a, .horizontal-menu ul.nav li > a:hover, .horizontal-menu ul.nav li > a:focus {
     background: #F5F5F5 !important;
@@ -1384,7 +1372,7 @@ ul.main-navigation-menu > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu
 }
 .horizontal-menu .dropdown-menu li:hover > a, .horizontal-menu ul.nav li.active > a, .horizontal-menu ul.nav li.active > a:hover {
     background: #007AFF !important;
-    color: #FFFFFF !important;
+    color: #f19c63 !important;
 }
 .horizontal-menu ul.nav li.current .selected, .horizontal-menu ul.nav li.active .selected {
     border-left: 6px solid rgba(0, 0, 0, 0);
@@ -1454,9 +1442,7 @@ ul.main-navigation-menu > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu
     margin-top: 0;
     top: auto;
 }
-/* ---------------------------------------------------------------------- */
-/*	Footer and footer elemnts
-/* ---------------------------------------------------------------------- */
+
 .footer {
 	font-size: 12px;
 	padding: 8px 20px 5px;
@@ -1478,9 +1464,7 @@ ul.main-navigation-menu > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu
 	border-top-style: solid;
 }
 
-/* ---------------------------------------------------------------------- */
-/*	Breadcrumb
-/* ---------------------------------------------------------------------- */
+
 .breadcrumb {
 	margin: 0 -15px;
 	border-radius: 0;
@@ -1502,9 +1486,7 @@ ul.main-navigation-menu > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu
 	position: relative;
 	height: 51px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Rating
-/* ---------------------------------------------------------------------- */
+
 .rating {
 	direction: rtl;
 	font-size: 30px;
@@ -1529,9 +1511,7 @@ span.star:before {
 	color: #E3CF7A;
 	content: "\f005";
 }
-/* ---------------------------------------------------------------------- */
-/*	Dropdown elements
-/* ---------------------------------------------------------------------- */
+
 .dropdown-checkboxes {
 	padding: 5px;
 }
@@ -1540,9 +1520,7 @@ span.star:before {
 	font-weight: normal;
 	line-height: 20px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Labels and Badges
-/* ---------------------------------------------------------------------- */
+
 .badge-success {
 	background-color: #5CB85C;
 }
@@ -1585,26 +1563,20 @@ span.star:before {
 .label-inverse, .badge-inverse {
 	background-color: #555555;
 }
-/* ---------------------------------------------------------------------- */
-/*	Progress bar
-/* ---------------------------------------------------------------------- */
+
 .progress.progress-xs {
 	height: 7px;
 }
 .progress.progress-sm {
 	height: 12px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Modal elements
-/* ---------------------------------------------------------------------- */
+
 
 .modal-footer {
 	background: #ECF0F1;
 	border-radius: 0 0 6px 6px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Tabs
-/* ---------------------------------------------------------------------- */
+
 .tabbable {
 	margin-bottom: 15px;
 }
@@ -2444,9 +2416,7 @@ span.star:before {
 .slider-blue .ui-rangeSlider-arrow {
 	color: #2D4259;
 }
-/* ---------------------------------------------------------------------- */
-/*	Nestable List
-/* ---------------------------------------------------------------------- */
+
 .dd {
 	position: relative;
 	display: block;
@@ -2567,9 +2537,7 @@ span.star:before {
 	-webkit-box-shadow: 2px 4px 6px 0 rgba(0,0,0,.1);
 	box-shadow: 2px 4px 6px 0 rgba(0,0,0,.1);
 }
-/**
- * Nestable Extras
- */
+
 .nestable-lists {
 	display: block;
 	clear: both;
@@ -2608,9 +2576,7 @@ span.star:before {
 .dd-hover > .dd-handle {
 	background: #2ea8e5 !important;
 }
-/**
- * Nestable Draggable Handles
- */
+
 .dd3-content {
 	display: block;
 	height: 30px;
@@ -2674,9 +2640,7 @@ span.star:before {
 .dd3-handle:hover {
 	background: #ddd;
 }
-/* ---------------------------------------------------------------------- */
-/*	Icons
-/* ---------------------------------------------------------------------- */
+
 .icons > section {
 	margin-top: 20px;
 }
@@ -2689,9 +2653,7 @@ span.star:before {
 .the-icons li:hover i {
 	font-size: 26px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Backdrop
-/* ---------------------------------------------------------------------- */
+
 .full-white-backdrop {
 	background-color: #FFFFFF;
 	display: none;
@@ -2702,9 +2664,7 @@ span.star:before {
 	width: 100%;
 	z-index: 9999;
 }
-/* ---------------------------------------------------------------------- */
-/*	Table and table elements
-/* ---------------------------------------------------------------------- */
+
 th.center, td.center {
 	text-align: center;
 }
@@ -2729,9 +2689,7 @@ td.center .dropdown-menu {
 	opacity: 0.5;
 	display: inline;
 }
-/* ---------------------------------------------------------------------- */
-/*	Timepicker
-/* ---------------------------------------------------------------------- */
+
 .bootstrap-timepicker-widget table td input {
 	width: 32px !important;
 }
@@ -2739,9 +2697,7 @@ td.center .dropdown-menu {
 	height: auto !important;
 	width: auto !important;
 }
-/* ---------------------------------------------------------------------- */
-/*	FileUpload
-/* ---------------------------------------------------------------------- */
+
 .fileupload .uneditable-input {
 	white-space: nowrap;
 }
@@ -2750,9 +2706,7 @@ td.center .dropdown-menu {
 	-moz-border-radius: 0 3px 3px 0 !important;
 	border-radius: 0 3px 3px 0 !important;
 }
-/* ---------------------------------------------------------------------- */
-/*	WYSIWYG
-/* ---------------------------------------------------------------------- */
+
 .wysiwyg {
 	padding: 5px 0;
 }
@@ -2785,9 +2739,7 @@ td.center .dropdown-menu {
 	margin: 0 !important;
 	text-shadow: none !important;
 }
-/* ---------------------------------------------------------------------- */
-/*	Form Wizard
-/* ---------------------------------------------------------------------- */
+
 .swMain > ul {
 	display: table;
 	list-style: none;
@@ -2901,9 +2853,7 @@ td.center .dropdown-menu {
 .swMain .close {
 	display: none;
 }
-/* ---------------------------------------------------------------------- */
-/*	Login
-/* ---------------------------------------------------------------------- */
+
 body.login {
 	color: #7F7F7F;
 }
@@ -2979,9 +2929,7 @@ body.login .new-account {
 	padding-top: 10px;
 	display: block;
 }
-/* ---------------------------------------------------------------------- */
-/*	404 and 500 errors
-/* ---------------------------------------------------------------------- */
+
 body.error-full-page {
 	background: #ffffff !important;
 }
@@ -3041,10 +2989,7 @@ body.error-full-page {
 	margin-left: 5%;
 	margin-top: 5%;
 }
-/* ---------------------------------------------------------------------- */
-/*	Inline Editor
-/* ---------------------------------------------------------------------- */
-}
+
 #inline-container [contenteditable="true"] {
 	padding: 10px;
 }
@@ -3135,9 +3080,7 @@ body.error-full-page {
 	font-weight: bold;
 	margin: 0 0 0 20px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Crop Image
-/* ---------------------------------------------------------------------- */
+
 .crop-image form {
 	margin: 1.5em 0;
 }
@@ -3157,17 +3100,13 @@ body.error-full-page {
 	-moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
 	box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
 }
-/* The Javascript code will set the aspect ratio of the crop
- area based on the size of the thumbnail preview,
- specified here */
+
 #preview-pane .preview-container {
 	width: 250px;
 	height: 170px;
 	overflow: hidden;
 }
-/* ---------------------------------------------------------------------- */
-/*	Timeline
-/* ---------------------------------------------------------------------- */
+
 div.timeline {
 	font-family: Arial;
 	margin: 0 auto;
@@ -3419,9 +3358,7 @@ div.timeline_element.purple:hover:after {
 div.timeline_element.purple div.timeline_title {
 	color: #EEEEEE;
 }
-/* ---------------------------------------------------------------------- */
-/*	Messages
-/* ---------------------------------------------------------------------- */
+
 .panel-body.messages {
 	padding: 0;
 }
@@ -3616,9 +3553,7 @@ div.timeline_element.purple div.timeline_title {
 	padding: 20px 10px;
 	color:#555555;
 }
-/* ---------------------------------------------------------------------- */
-/*	Pricing Tables
-/* ---------------------------------------------------------------------- */
+
 #pricing_table_example1 .pricing-table {
 	background: none repeat scroll 0 0 #FFFFFF;
 	border: 1px solid #DDDDDD;
@@ -3756,9 +3691,7 @@ div.timeline_element.purple div.timeline_title {
 	color: #BCBEC0;
 	font: 500 14px/1 Helvetica, Verdana, sans-serif;
 }
-/* ---------------------------------------------------------------------- */
-/*	Coming Soon
-/* ---------------------------------------------------------------------- */
+
 .coming-soon {
 	text-align: center;
 	background-color: #ffffff !important;
@@ -3819,9 +3752,6 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 	color: #2A9CCC;
 	font-size: 1.2em;
 }
-/* ---------------------------------------------------------------------- */
-/*	Flot Chart
-/* ---------------------------------------------------------------------- */
 .flot-container {
 	box-sizing: border-box;
 	position: relative;
@@ -3853,9 +3783,7 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 .flot-medium-container {
 	height: 360px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Maps
-/* ---------------------------------------------------------------------- */
+
 .map {
 	display: block;
 	height: 350px;
@@ -3864,9 +3792,7 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 .map.large {
 	height: 500px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Overlay
-/* ---------------------------------------------------------------------- */
+
 .overlay {
 	display: block;
 	text-align: center;
@@ -3900,9 +3826,7 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 	border-right: 16px solid transparent;
 	border-bottom: 16px solid #336699;
 }
-/* ---------------------------------------------------------------------- */
-/*	Calendar
-/* ---------------------------------------------------------------------- */
+
 #calendar {
 	position: relative;
 }
@@ -3993,9 +3917,7 @@ ul#countdown li p.timeRefDays, ul#countdown li p.timeRefHours, ul#countdown li p
 	background-color: #3D9400 !important;
 	border-color: #3D9400 !important;
 }
-/* ---------------------------------------------------------------------- */
-/*	Lock Screen
-/* ---------------------------------------------------------------------- */
+
 .main-ls {
 	height: 250px;
 	left: 50%;
@@ -4043,18 +3965,14 @@ body.lock-screen .user-info > span {
 body.lock-screen .user-info > span em {
 	color: #333333;
 }
-/* ---------------------------------------------------------------------- */
-/*	daterangepicker
-/* ---------------------------------------------------------------------- */
+
 .daterangepicker {
 	margin-top: 51px !important;
 }
 body.header-default .daterangepicker {
 	margin-top: 1px !important;
 }
-/* ---------------------------------------------------------------------- */
-/*	Style Selector
-/* ---------------------------------------------------------------------- */
+
 #style_selector {
 	background: none repeat scroll 0 0 #FFFFFF;
 	position: fixed;
@@ -4214,9 +4132,7 @@ body.header-default .daterangepicker {
 #style_selector .clear_style{
 	margin-right:20px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Home elements
-/* ---------------------------------------------------------------------- */
+
 .circle-icon {
 	background-color: #333333;
 	border-radius: 75px 75px 75px 75px;
@@ -4361,9 +4277,7 @@ body.header-default .daterangepicker {
 .chat-form{
 	margin-bottom: 20px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Sparklines
-/* ---------------------------------------------------------------------- */
+
 .mini-stats {
 	border-left: 1px solid #DDDDDD;
 	list-style: none;
@@ -4416,9 +4330,7 @@ body.header-default .daterangepicker {
 	border: 0 !important;
 	border-radius: 3px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Easy Pie Chart
-/* ---------------------------------------------------------------------- */
+
 .easy-pie-chart {
 	position: relative;
 	text-align: center;
@@ -4458,9 +4370,7 @@ body.header-default .daterangepicker {
 	vertical-align: baseline;
 	white-space: nowrap;
 }
-/* ---------------------------------------------------------------------- */
-/*	User profile
-/* ---------------------------------------------------------------------- */
+
 
 .user-left {
 	border-right: 1px solid #DDDDDD;
@@ -4494,9 +4404,7 @@ body.header-default .daterangepicker {
 #projects .progress {
 	margin-bottom: 0;
 }
-/* ---------------------------------------------------------------------- */
-/*	Gallery
-/* ---------------------------------------------------------------------- */
+
 .gallery-img {
 	margin-bottom: 20px;
 }
@@ -4591,9 +4499,7 @@ body.header-default .daterangepicker {
 .wrap-image .tools.tools-bottom > a, .wrap-image .tools.tools-top > a {
 	display: inline-block;
 }
-/* ---------------------------------------------------------------------- */
-/*	Compatibility with font-awesome 3
-/* ---------------------------------------------------------------------- */
+
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: FontAwesome;
@@ -4700,9 +4606,7 @@ a [class*=" icon-"] {
 .icon-double-angle-right:before {
   content: "\f101";
 }
-/* ---------------------------------------------------------------------- */
-/*	Animation Page
-/* ---------------------------------------------------------------------- */
+
 
 .animation-container {
     overflow: hidden;
@@ -4721,18 +4625,14 @@ a [class*=" icon-"] {
     color:#007AFF;
 
 }
-/* ---------------------------------------------------------------------- */
-/*	X-editable Table
-/* ---------------------------------------------------------------------- */
+
 td.column-left{
 	width: 25%;	
 }
 td.column-right{
 	width: 75%;	
 }
-/* ---------------------------------------------------------------------- */
-/*	Invoice
-/* ---------------------------------------------------------------------- */
+
 .invoice{
     margin-bottom: 20px;
 }

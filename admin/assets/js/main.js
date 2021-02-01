@@ -1,13 +1,10 @@
-// global variables
+
 var isIE8 = false;
 var isIE9 = false;
 var $windowWidth;
 var $windowHeight;
 var $pageArea;
-// Debounce Function
 (function ($, sr) {
-    // debouncing function from John Hann
-    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
     var debounce = function (func, threshold, execAsap) {
         var timeout;
         return function debounced() {
@@ -28,16 +25,16 @@ var $pageArea;
             timeout = setTimeout(delayed, threshold || 100);
         };
     };
-    // smartresize
+    
     jQuery.fn[sr] = function (fn) {
         return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
     };
 
 })(jQuery, 'clipresize');
 
-//Main Function
+
 var Main = function () {
-    //function to detect explorer browser and its version
+    
     var runInit = function () {
         if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
             var ieversion = new Number(RegExp.$1);
@@ -48,7 +45,7 @@ var Main = function () {
             }
         }
     };
-    //function to adjust the template elements based on the window size
+    
     var runElementsPosition = function () {
         $windowWidth = $(window).width();
         $windowHeight = $(window).height();
@@ -57,7 +54,7 @@ var Main = function () {
         runContainerHeight();
 
     };
-    //function to adapt the Main Content height to the Main Navigation height
+    
     var runContainerHeight = function () {
         mainContainer = $('.main-content > .container');
         mainNavigation = $('.main-navigation');
@@ -73,7 +70,7 @@ var Main = function () {
             mainNavigation.css('min-height', $windowHeight - $('body > .navbar').outerHeight());
         }
     };
-    //function to activate the ToDo list, if present
+    
     var runToDoAction = function () {
         if ($(".todo-actions").length) {
             $(".todo-actions").click(function () {
@@ -98,19 +95,19 @@ var Main = function () {
             });
         }
     };
-    //function to activate the Tooltips, if present
+    
     var runTooltips = function () {
         if ($(".tooltips").length) {
             $('.tooltips').tooltip();
         }
     };
-    //function to activate the Popovers, if present
+    
     var runPopovers = function () {
         if ($(".popovers").length) {
             $('.popovers').popover();
         }
     };
-    //function to allow a button or a link to open a tab
+    
     var runShowTab = function () {
         if ($(".show-tab").length) {
             $('.show-tab').bind('click', function (e) {
@@ -134,7 +131,7 @@ var Main = function () {
             });
         }
     };
-    //function to extend the default settings of the Accordion
+    
     var runAccordionFeatures = function () {
         if ($('.accordion').length) {
             $('.accordion .panel-collapse').each(function () {
@@ -153,7 +150,7 @@ var Main = function () {
             }, 1000);
         });
     };
-    //function to reduce the size of the Main Menu
+    
     var runNavigationToggler = function () {
         $('.navigation-toggler').bind('click', function () {
             if (!$('body').hasClass('navigation-small')) {
@@ -163,7 +160,7 @@ var Main = function () {
             };
         });
     };
-    //function to activate the panel tools
+   
     var runModuleTools = function () {
         $('.panel-tools .panel-expand').bind('click', function (e) {
             $('.panel-tools a').not(this).hide();
@@ -230,7 +227,7 @@ var Main = function () {
             }
         });
     };
-    //function to activate the 3rd and 4th level menus
+    
     var runNavigationMenu = function () {
         $('.main-navigation-menu li.active').addClass('open');
         $('.main-navigation-menu > li a').bind('click', function () {
@@ -255,7 +252,6 @@ var Main = function () {
             }
         });
     };
-    //function to activate the Go-Top button
     var runGoTop = function () {
         $('.go-top').bind('click', function (e) {
             $("html, body").animate({
@@ -264,7 +260,6 @@ var Main = function () {
             e.preventDefault();
         });
     };
-    //function to avoid closing the dropdown on click
     var runDropdownEnduring = function () {
         if ($('.dropdown-menu.dropdown-enduring').length) {
             $('.dropdown-menu.dropdown-enduring').click(function (event) {
@@ -272,134 +267,132 @@ var Main = function () {
             });
         }
     };
-    //function to return the querystring parameter with a given name.
     var getParameterByName = function (name) {
         name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
             results = regex.exec(location.search);
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     };
-    //function to activate the iCheck Plugin
     var runCustomCheck = function () {
         if ($('input[type="checkbox"]').length || $('input[type="radio"]').length) {
             $('input[type="checkbox"].grey, input[type="radio"].grey').iCheck({
                 checkboxClass: 'icheckbox_minimal-grey',
                 radioClass: 'iradio_minimal-grey',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].red, input[type="radio"].red').iCheck({
                 checkboxClass: 'icheckbox_minimal-red',
                 radioClass: 'iradio_minimal-red',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].green, input[type="radio"].green').iCheck({
                 checkboxClass: 'icheckbox_minimal-green',
                 radioClass: 'iradio_minimal-green',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].teal, input[type="radio"].teal').iCheck({
                 checkboxClass: 'icheckbox_minimal-aero',
                 radioClass: 'iradio_minimal-aero',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].orange, input[type="radio"].orange').iCheck({
                 checkboxClass: 'icheckbox_minimal-orange',
                 radioClass: 'iradio_minimal-orange',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].purple, input[type="radio"].purple').iCheck({
                 checkboxClass: 'icheckbox_minimal-purple',
                 radioClass: 'iradio_minimal-purple',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].yellow, input[type="radio"].yellow').iCheck({
                 checkboxClass: 'icheckbox_minimal-yellow',
                 radioClass: 'iradio_minimal-yellow',
-                increaseArea: '10%' // optional
+                increaseArea: '10%'
             });
             $('input[type="checkbox"].square-black, input[type="radio"].square-black').iCheck({
                 checkboxClass: 'icheckbox_square',
                 radioClass: 'iradio_square',
-                increaseArea: '10%' // optional
+                increaseArea: '10%'
             });
             $('input[type="checkbox"].square-grey, input[type="radio"].square-grey').iCheck({
                 checkboxClass: 'icheckbox_square-grey',
                 radioClass: 'iradio_square-grey',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].square-red, input[type="radio"].square-red').iCheck({
                 checkboxClass: 'icheckbox_square-red',
                 radioClass: 'iradio_square-red',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].square-green, input[type="radio"].square-green').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].square-teal, input[type="radio"].square-teal').iCheck({
                 checkboxClass: 'icheckbox_square-aero',
                 radioClass: 'iradio_square-aero',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].square-orange, input[type="radio"].square-orange').iCheck({
                 checkboxClass: 'icheckbox_square-orange',
                 radioClass: 'iradio_square-orange',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].square-purple, input[type="radio"].square-purple').iCheck({
                 checkboxClass: 'icheckbox_square-purple',
                 radioClass: 'iradio_square-purple',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].square-yellow, input[type="radio"].square-yellow').iCheck({
                 checkboxClass: 'icheckbox_square-yellow',
                 radioClass: 'iradio_square-yellow',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-black, input[type="radio"].flat-black').iCheck({
                 checkboxClass: 'icheckbox_flat',
                 radioClass: 'iradio_flat',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-grey, input[type="radio"].flat-grey').iCheck({
                 checkboxClass: 'icheckbox_flat-grey',
                 radioClass: 'iradio_flat-grey',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
                 checkboxClass: 'icheckbox_flat-red',
                 radioClass: 'iradio_flat-red',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-green, input[type="radio"].flat-green').iCheck({
                 checkboxClass: 'icheckbox_flat-green',
                 radioClass: 'iradio_flat-green',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-teal, input[type="radio"].flat-teal').iCheck({
                 checkboxClass: 'icheckbox_flat-aero',
                 radioClass: 'iradio_flat-aero',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-orange, input[type="radio"].flat-orange').iCheck({
                 checkboxClass: 'icheckbox_flat-orange',
                 radioClass: 'iradio_flat-orange',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-purple, input[type="radio"].flat-purple').iCheck({
                 checkboxClass: 'icheckbox_flat-purple',
                 radioClass: 'iradio_flat-purple',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
             $('input[type="checkbox"].flat-yellow, input[type="radio"].flat-yellow').iCheck({
                 checkboxClass: 'icheckbox_flat-yellow',
                 radioClass: 'iradio_flat-yellow',
-                increaseArea: '10%' // optional
+                increaseArea: '10%' 
             });
         };
     };
-    //Search Input function
+    
     var runSearchInput = function () {
         var search_input = $('.sidebar-search input');
         var search_button = $('.sidebar-search button');
@@ -537,7 +530,7 @@ var Main = function () {
         };
     };
 
-    //function to activate Less style
+   
     var runActivateLess = function () {
         $('		.icons-color img').removeClass('active');
         if ($('#skin_color').attr("rel") == "stylesheet") {
@@ -552,14 +545,13 @@ var Main = function () {
         });
     };
 
-    //Window Resize Function
+    
     var runWIndowResize = function (func, threshold, execAsap) {
-        //wait until the user is done resizing the window, then execute
         $(window).clipresize(function () {
             runElementsPosition();
         });
     };
-    //function to save user settings
+    
     var runSaveSetting = function () {
         $('.save_style').bind('click', function () {
             var clipSetting = new Object;
@@ -621,7 +613,7 @@ var Main = function () {
             }, 1000);
         });
     };
-    //function to load user settings
+    
     var runCustomSetting = function () {
         if ($.cookie("clip-setting")) {
             var loadSetting = jQuery.parseJSON($.cookie("clip-setting"));
@@ -657,7 +649,7 @@ var Main = function () {
             runDefaultSetting();
         };
     };
-    //function to clear user settings
+    
     var runClearSetting = function () {
         $('.clear_style').bind('click', function () {
             $.removeCookie("clip-setting");
@@ -673,7 +665,7 @@ var Main = function () {
             runDefaultSetting();
         });
     };
-    //function to restore user settings
+    
     var runDefaultSetting = function () {
         $('#style_selector select[name="layout"]').val('default');
         $('#style_selector select[name="header"]').val('fixed');
@@ -684,7 +676,7 @@ var Main = function () {
         $('.color-badge').val('#007AFF').next('.dropdown').find('i').css('background-color', '#007AFF');
     };
     return {
-        //main function to initiate template pages
+      
         init: function () {
             runWIndowResize();
             runInit();
