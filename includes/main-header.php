@@ -1,5 +1,5 @@
 <?php 
-
+ 
  if(isset($_Get['action'])){
 		if(!empty($_SESSION['cart'])){
 		foreach($_POST['quantity'] as $key => $val){
@@ -12,6 +12,21 @@
 		}
 	}
 ?>
+<style>
+        span.note{
+           font-size: 120%; 
+           color: #F1042C;
+        }
+</style>
+
+<style type="text/css">
+  h2{
+    color: #000;
+  }
+  .main-header{
+	background:  #FFB039;
+  }
+    </style>
 	<div class="main-header">
 		<div class="container">
 			<div class="row">
@@ -20,7 +35,7 @@
 <div class="logo">
 	<a href="index.php">
 		
-		<h2>SuperM.com</h2>
+	<h2>SuperM<span class="note">.com</span> </h2>
 
 	</a>
 </div>		
@@ -93,7 +108,7 @@ if(!empty($_SESSION['cart'])){
 						<div class="col-xs-7">
 							
 							<h3 class="name"><a href="product-details.php?pid=<?php echo $row['id'];?>"><?php echo $row['productName']; ?></a></h3>
-							<div class="price">Rs.<?php echo ($row['productPrice']+$row['shippingCharge']); ?>*<?php echo $_SESSION['cart'][$row['id']]['quantity']; ?></div>
+							<div class="price">MXN.<?php echo ($row['productPrice']+$row['shippingCharge']); ?>*<?php echo $_SESSION['cart'][$row['id']]['quantity']; ?></div>
 						</div>
 						
 					</div>
@@ -126,7 +141,7 @@ if(!empty($_SESSION['cart'])){
 				<div class="total-price-basket">
 					<span class="lbl">cart -</span>
 					<span class="total-price">
-						<span class="sign">MNX.</span>
+						<span class="sign">Rs.</span>
 						<span class="value">00.00</span>
 					</span>
 				</div>
@@ -146,7 +161,7 @@ if(!empty($_SESSION['cart'])){
 				<div class="cart-item product-summary">
 					<div class="row">
 						<div class="col-xs-12">
-							Your Shopping Cart is Empty.
+							...
 						</div>
 						
 						
