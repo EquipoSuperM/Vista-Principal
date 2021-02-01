@@ -12,13 +12,13 @@ $password=md5($_POST['password']);
 $query=mysqli_query($con,"insert into users(name,email,contactno,password) values('$name','$email','$contactno','$password')");
 if($query)
 {
-	echo "<script>alert('You are successfully register');</script>";
+	echo "<script>alert('Registrada con Exito');</script>";
 }
 else{
-echo "<script>alert('Not register something went worng');</script>";
+echo "<script>alert('No se pudo Registrar');</script>";
 }
 }
-// Code for User login
+
 if(isset($_POST['login']))
 {
    $email=$_POST['email'];
@@ -49,7 +49,7 @@ $log=mysqli_query($con,"insert into userlog(userEmail,userip,status) values('$em
 $host  = $_SERVER['HTTP_HOST'];
 $uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
 header("location:http://$host$uri/$extra");
-$_SESSION['errmsg']="Invalid email id or Password";
+$_SESSION['errmsg']="El ID del correo electrónico o contraseña no válidos";
 exit();
 }
 }
@@ -158,8 +158,8 @@ error:function (){}
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Authentication</li>
+				<li><a href="home.html">CASA</a></li>
+				<li class='active'>Autenticación</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -171,8 +171,8 @@ error:function (){}
 			<div class="row">
 				<!-- Sign-in -->			
 <div class="col-md-6 col-sm-6 sign-in">
-	<h4 class="">sign in</h4>
-	<p class="">Hello, Welcome to your account.</p>
+	<h4 class="">Registrate</h4>
+	
 	<form class="register-form outer-top-xs" method="post">
 	<span style="color:red;" >
 <?php
@@ -183,67 +183,57 @@ echo htmlentities($_SESSION['errmsg']="");
 ?>
 	</span>
 		<div class="form-group">
-		    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
+		    <label class="info-title" for="exampleInputEmail1">Correo Electronico <span>*</span></label>
 		    <input type="email" name="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
 		</div>
 	  	<div class="form-group">
-		    <label class="info-title" for="exampleInputPassword1">Password <span>*</span></label>
+		    <label class="info-title" for="exampleInputPassword1">Contraseña<span>*</span></label>
 		 <input type="password" name="password" class="form-control unicase-form-control text-input" id="exampleInputPassword1" >
 		</div>
 		<div class="radio outer-xs">
-		  	<a href="forgot-password.php" class="forgot-password pull-right">Forgot your Password?</a>
+		  	<a href="forgot-password.php" class="forgot-password pull-right">¿Olvidaste tu contraseña?</a>
 		</div>
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Login</button>
+	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Iniciar Sesión</button>
 	</form>					
 </div>
 <!-- Sign-in -->
 
 <!-- create a new account -->
 <div class="col-md-6 col-sm-6 create-new-account">
-	<h4 class="checkout-subtitle">create a new account</h4>
-	<p class="text title-tag-line">Create your own Shopping account.</p>
+	<h4 class="checkout-subtitle">Create un nueva cuenta</h4>
+
 	<form class="register-form outer-top-xs" role="form" method="post" name="register" onSubmit="return valid();">
 <div class="form-group">
-	    	<label class="info-title" for="fullname">Full Name <span>*</span></label>
+	    	<label class="info-title" for="fullname">Nombre Completo <span>*</span></label>
 	    	<input type="text" class="form-control unicase-form-control text-input" id="fullname" name="fullname" required="required">
 	  	</div>
 
 
 		<div class="form-group">
-	    	<label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
+	    	<label class="info-title" for="exampleInputEmail2">Correo Electronico<span>*</span></label>
 	    	<input type="email" class="form-control unicase-form-control text-input" id="email" onBlur="userAvailability()" name="emailid" required >
 	    	       <span id="user-availability-status1" style="font-size:12px;"></span>
 	  	</div>
 
 <div class="form-group">
-	    	<label class="info-title" for="contactno">Contact No. <span>*</span></label>
+	    	<label class="info-title" for="contactno">Telefono<span>*</span></label>
 	    	<input type="text" class="form-control unicase-form-control text-input" id="contactno" name="contactno" maxlength="10" required >
 	  	</div>
 
 <div class="form-group">
-	    	<label class="info-title" for="password">Password. <span>*</span></label>
+	    	<label class="info-title" for="password">Contraseña<span>*</span></label>
 	    	<input type="password" class="form-control unicase-form-control text-input" id="password" name="password"  required >
 	  	</div>
 
 <div class="form-group">
-	    	<label class="info-title" for="confirmpassword">Confirm Password. <span>*</span></label>
+	    	<label class="info-title" for="confirmpassword">Confirmar Contraseña<span>*</span></label>
 	    	<input type="password" class="form-control unicase-form-control text-input" id="confirmpassword" name="confirmpassword" required >
 	  	</div>
 
 
-	  	<button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button" id="submit">Sign Up</button>
+	  	<button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button" id="submit">Crear Cuenta</button>
 	</form>
-	<span class="checkout-subtitle outer-top-xs">Sign Up Today And You'll Be Able To :  </span>
-	<div class="checkbox">
-	  	<label class="checkbox">
-		  	Speed your way through the checkout.
-		</label>
-		<label class="checkbox">
-		Track your orders easily.
-		</label>
-		<label class="checkbox">
- Keep a record of all your purchases.
-		</label>
+	
 	</div>
 </div>	
 <!-- create a new account -->			</div><!-- /.row -->
