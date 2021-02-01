@@ -62,14 +62,11 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
     <body class="cnt-home">
 	
 		
-	
-		<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1">
 <?php include('includes/top-header.php');?>
 <?php include('includes/main-header.php');?>
 <?php include('includes/menu-bar.php');?>
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
@@ -151,9 +148,7 @@ while($row=mysqli_fetch_array($query))
 		</div><!-- /.shopping-cart -->
 		</div> <!-- /.row -->
 		</form>
-		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-<?php echo include('includes/brands-slider.php');?>
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
+		<?php echo include('includes/brands-slider.php');?>
 </div><!-- /.body-content -->
 <?php include('includes/footer.php');?>
 
@@ -173,7 +168,6 @@ while($row=mysqli_fetch_array($query))
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
@@ -190,7 +184,6 @@ while($row=mysqli_fetch_array($query))
 		   $('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 </body>
 </html>
 <?php } ?>

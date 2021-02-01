@@ -183,8 +183,8 @@ while($row=mysqli_fetch_array($sql))
 					</div>
 			<?php } ?>
 			
-				</div><!-- /.caption -->
-			</div><!-- /.container-fluid -->
+				</div>
+			</div>
 		</div>
 </div>
 
@@ -206,8 +206,8 @@ while ($row=mysqli_fetch_array($ret))
 		<div class="product-image">
 			<div class="image">
 				<a href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img  src="assets/images/blank.gif" data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>" alt="" width="200" height="300"></a>
-			</div><!-- /.image -->			                      		   
-		</div><!-- /.product-image -->
+			</div>
+		</div>
 			
 		
 		<div class="product-info text-left">
@@ -220,9 +220,9 @@ while ($row=mysqli_fetch_array($ret))
 					MXN. <?php echo htmlentities($row['productPrice']);?>			</span>
 										     <span class="price-before-discount">MXN. <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
-			</div><!-- /.product-price -->
+			</div>
 			
-		</div><!-- /.product-info -->
+		</div>
 					<div class="cart clearfix animate-effect">
 				<div class="action">
 					<ul class="list-unstyled">
@@ -248,8 +248,8 @@ while ($row=mysqli_fetch_array($ret))
 
 						
 					</ul>
-				</div><!-- /.action -->
-			</div><!-- /.cart -->
+				</div>
+			</div>
 			</div>
 			</div>
 		</div>
@@ -269,16 +269,16 @@ while ($row=mysqli_fetch_array($ret))
 		
 	
 		
-										</div><!-- /.row -->
-							</div><!-- /.category-product -->
+										</div>
+							</div>
 						
-						</div><!-- /.tab-pane -->
+						</div>
 						
 				
 
-				</div><!-- /.search-result-container -->
+				</div>
 
-			</div><!-- /.col -->
+			</div>
 		</div></div>
 		<?php include('includes/brands-slider.php');?>
 
@@ -301,7 +301,6 @@ while ($row=mysqli_fetch_array($ret))
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
@@ -318,7 +317,7 @@ while ($row=mysqli_fetch_array($ret))
 		   $('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
+
 
 	
 

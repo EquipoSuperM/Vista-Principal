@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
-// Code user Registration
+
 if(isset($_POST['submit']))
 {
 $name=$_POST['fullname'];
@@ -143,20 +143,14 @@ error:function (){}
 	
 		
 	
-		<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1">
 
-	<!-- ============================================== TOP MENU ============================================== -->
 <?php include('includes/top-header.php');?>
-<!-- ============================================== TOP MENU : END ============================================== -->
 <?php include('includes/main-header.php');?>
-	<!-- ============================================== NAVBAR ============================================== -->
 <?php include('includes/menu-bar.php');?>
-<!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
 
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">

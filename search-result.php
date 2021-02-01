@@ -96,22 +96,16 @@ header('location:my-wishlist.php');
 	
 <header class="header-style-1">
 
-	<!-- ============================================== TOP MENU ============================================== -->
 <?php include('includes/top-header.php');?>
-<!-- ============================================== TOP MENU : END ============================================== -->
 <?php include('includes/main-header.php');?>
-	<!-- ============================================== NAVBAR ============================================== -->
 <?php include('includes/menu-bar.php');?>
-<!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 </div><!-- /.breadcrumb -->
 <div class="body-content outer-top-xs">
 	<div class='container'>
 		<div class='row outer-bottom-sm'>
 			<div class='col-md-3 sidebar'>
-	            <!-- ================================== TOP NAVIGATION ================================== -->
 <div class="side-menu animate-dropdown outer-bottom-xs">       
 <div class="side-menu animate-dropdown outer-bottom-xs">
     <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categorias</div>        
@@ -133,11 +127,9 @@ while($row=mysqli_fetch_array($sql))
     </nav>
 </div>
 </div><!-- /.side-menu -->
-<!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
 	            	<h3 class="section-title">Categoria del Producto</h3>
 	            	<div class="sidebar-filter">
-		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
-<div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
+		            	<div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
 		<h4 class="widget-title">Categoria</h4>
 	</div>
@@ -162,14 +154,12 @@ while($row=mysqli_fetch_array($sql))
 
 
     
-<!-- ============================================== COLOR: END ============================================== -->
 
 	            	</div><!-- /.sidebar-filter -->
 	            </div><!-- /.sidebar-module-container -->
             </div><!-- /.sidebar -->
 			<div class='col-md-9'>
-					<!-- ========================================== SECTION – HERO ========================================= -->
-
+				
 	<div id="category" class="category-carousel hidden-xs">
 		<div class="item">	
 			<div class="image">
@@ -220,9 +210,9 @@ while ($row=mysqli_fetch_array($ret))
 					MXN. <?php echo htmlentities($row['productPrice']);?>			</span>
 										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
-			</div><!-- /.product-price -->
+			</div>
 			
-		</div><!-- /.product-info -->
+		</div>
 					<div class="cart clearfix animate-effect">
 				<div class="action">
 					<ul class="list-unstyled">
@@ -301,7 +291,6 @@ Ningún producto encontrado</h3>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	

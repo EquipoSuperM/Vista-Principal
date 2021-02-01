@@ -72,13 +72,11 @@ Historial de pedidos pendientes</title>
 	
 		
 	
-		<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1">
 <?php include('includes/top-header.php');?>
 <?php include('includes/main-header.php');?>
 <?php include('includes/menu-bar.php');?>
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
@@ -174,9 +172,7 @@ No se han encontrado resultados</h4></td>
 		</div><!-- /.shopping-cart -->
 		</div> <!-- /.row -->
 		</form>
-		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
 <?php echo include('includes/brands-slider.php');?>
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
 </div><!-- /.body-content -->
 <?php include('includes/footer.php');?>
 

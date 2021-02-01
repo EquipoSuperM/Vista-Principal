@@ -112,9 +112,7 @@ Tarjeta de crédito débito <br /><br />
 				</div>
 			</div><!-- /.row -->
 		</div><!-- /.checkout-box -->
-		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-<?php echo include('includes/brands-slider.php');?>
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
+		<?php echo include('includes/brands-slider.php');?>
 </div><!-- /.body-content -->
 <?php include('includes/footer.php');?>
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
@@ -133,7 +131,6 @@ Tarjeta de crédito débito <br /><br />
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
@@ -150,7 +147,6 @@ Tarjeta de crédito débito <br /><br />
 		   $('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 
 	
 

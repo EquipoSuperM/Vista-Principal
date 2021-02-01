@@ -72,27 +72,24 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 	
 		
 	
-		<!-- ============================================== HEADER ============================================== -->
+
 <header class="header-style-1">
 <?php include('includes/top-header.php');?>
 <?php include('includes/main-header.php');?>
 <?php include('includes/menu-bar.php');?>
 </header>
 
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="body-content outer-top-xs" id="top-banner-and-menu">
 	<div class="container">
 		<div class="furniture-container homepage-container">
 		<div class="row">
 		
 			<div class="col-xs-12 col-sm-12 col-md-3 sidebar">
-				<!-- ================================== tOP nAVEGACION ================================== -->
 	<?php include('includes/side-menu.php');?>
-<!-- ================================== TOP NAVIGAcION : END ================================== -->
 			</div><!-- /.sidemenu-holder -->	
 			
 			<div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder">
-				<!-- ========================================== Seccion– HERO ========================================= -->
+				
 			
 <div id="hero" class="homepage-slider3">
 	<div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
@@ -110,8 +107,6 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 	</div><!-- /.owl-carousel -->
 </div>
 			
-<!-- ========================================= SECTION – HERO : END ========================================= -->	
-				<!-- ============================================== INFO BOXES ============================================== -->
 <div class="info-boxes wow fadeInUp">
 	<div class="info-boxes-inner">
 		<div class="row">
@@ -160,12 +155,11 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 	</div><!-- /.info-boxes-inner -->
 	
 </div><!-- /.info-boxes -->
-<!-- ============================================== INFO BOXES : END ============================================== -->		
+	
 			</div><!-- /.homebanner-holder -->
 			
 		</div><!-- /.row -->
 
-		<!-- ============================================== SCROLL TABS ============================================== -->
 		<div id="product-tabs-slider" class="scroll-tabs inner-bottom-vs  wow fadeInUp">
 			<div class="more-info-tab clearfix">
 			   <h3 class="new-product-title pull-left">Productos Destacados</h3>
@@ -214,22 +208,22 @@ while ($row=mysqli_fetch_array($ret))
 				MXN.<?php echo htmlentities($row['productPrice']);?>			</span>
 										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?>	</span>
 									
-			</div><!-- /.product-price -->
+			</div>
 			
-		</div><!-- /.product-info -->
+		</div>
 		<?php if($row['productAvailability']=='In Stock'){?>
 					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a></div>
 				<?php } else {?>
 						<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
-			</div><!-- /.product -->
+			</div>
       
-			</div><!-- /.products -->
-		</div><!-- /.item -->
+			</div>
+		</div>
 	<?php } ?>
 
-			</div><!-- /.home-owl-carousel -->
-					</div><!-- /.product-slider -->
+			</div>
+					</div>
 				</div>
 
 
@@ -352,7 +346,7 @@ while ($row=mysqli_fetch_array($ret))
 		</div>
 		    
 
-         <!-- ============================================== TABS ============================================== -->
+       
 			<div class="sections prod-slider-small outer-top-small">
 				<div class="row">
 					<div class="col-md-6">
@@ -460,7 +454,7 @@ while ($row=mysqli_fetch_array($ret))
 					</div>
 				</div>
 			</div>
-		<!-- ============================================== TABS : END ============================================== -->
+
 
 		
 
@@ -512,8 +506,8 @@ while ($row=mysqli_fetch_array($ret))
 					<?php } ?>
 										</div>
 									</div><!-- /.col -->
-								</div><!-- /.product-micro-row -->
-							</div><!-- /.product-micro -->
+								</div>
+							</div>
 						</div>
 
 
@@ -542,8 +536,6 @@ while ($row=mysqli_fetch_array($ret))
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
-	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
 	<script>
@@ -559,7 +551,6 @@ while ($row=mysqli_fetch_array($ret))
 		   $('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 
 	
 

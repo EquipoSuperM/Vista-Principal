@@ -95,27 +95,19 @@ header('location:my-wishlist.php');
 	
 <header class="header-style-1">
 
-	<!-- ============================================== TOP MENU ============================================== -->
 <?php include('includes/top-header.php');?>
-<!-- ============================================== TOP MENU : END ============================================== -->
 <?php include('includes/main-header.php');?>
-	<!-- ============================================== NAVBAR ============================================== -->
 <?php include('includes/menu-bar.php');?>
-<!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 </div><!-- /.breadcrumb -->
 <div class="body-content outer-top-xs">
 	<div class='container'>
 		<div class='row outer-bottom-sm'>
-			<div class='col-md-3 sidebar'>
-	            <!-- ================================== TOP NAVIGATION ================================== -->
-<!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
+			<div class='col-md-3 sidebar'>          <div class="sidebar-module-container">
 	            	<h3 class="section-title">Comprar por</h3>
 	            	<div class="sidebar-filter">
-		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
-<div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
+		            	<div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
 		<h4 class="widget-title">Categoria</h4>
 	</div>
@@ -140,14 +132,12 @@ while($row=mysqli_fetch_array($sql))
 
 
     
-<!-- ============================================== COLOR: END ============================================== -->
 
 	            	</div><!-- /.sidebar-filter -->
 	            </div><!-- /.sidebar-module-container -->
             </div><!-- /.sidebar -->
 			<div class='col-md-9'>
-					<!-- ========================================== SECTION – HERO ========================================= -->
-
+					
 	<div id="category" class="category-carousel hidden-xs">
 		<div class="item">	
 			<div class="image">
@@ -256,13 +246,13 @@ Ningún producto encontrado</h3>
 	
 		
 										</div><!-- /.row -->
-							</div><!-- /.category-product -->
+							</div>
 						
 						</div><!-- /.tab-pane -->
 						
 				
 
-				</div><!-- /.search-result-container -->
+				</div>
 
 			</div><!-- /.col -->
 		</div></div>

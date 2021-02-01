@@ -261,11 +261,11 @@ $num=mysqli_num_rows($rt);
 $_SESSION['pid']=$pdtid;
 				?>
 				
-			</tbody><!-- /tbody -->
-		</table><!-- /table -->
+			</tbody>
+		</table>
 		
 	</div>
-</div><!-- /.shopping-cart-table -->			<div class="col-md-4 col-sm-12 estimate-ship-tax">
+</div>			<div class="col-md-4 col-sm-12 estimate-ship-tax">
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -419,7 +419,6 @@ echo "Your shopping Cart is empty";
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
@@ -436,6 +435,5 @@ echo "Your shopping Cart is empty";
 		   $('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 </body>
 </html>

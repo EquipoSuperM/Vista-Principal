@@ -6,7 +6,7 @@ include('includes/config.php');
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!-- Meta -->
+	
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -39,16 +39,11 @@ include('includes/config.php');
 	
 <header class="header-style-1">
 
-	<!-- ============================================== TOP MENU ============================================== -->
 <?php include('includes/top-header.php');?>
-<!-- ============================================== TOP MENU : END ============================================== -->
 <?php include('includes/main-header.php');?>
-	<!-- ============================================== NAVBAR ============================================== -->
 <?php include('includes/menu-bar.php');?>
-<!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
@@ -83,8 +78,7 @@ Correo electrónico registrado</label>
 	</form>	
 </div>			</div><!-- /.row -->
 		</div><!-- /.sigin-in-->
-		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-<div 
+		<div 
 
 <?php echo include('includes/brands-slider.php');?>
 </div>

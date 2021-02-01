@@ -115,16 +115,11 @@ return true;
     <body class="cnt-home">
 <header class="header-style-1">
 
-	<!-- ============================================== TOP MENU ============================================== -->
 <?php include('includes/top-header.php');?>
-<!-- ============================================== TOP MENU : END ============================================== -->
 <?php include('includes/main-header.php');?>
-	<!-- ============================================== NAV-BAR ============================================== -->
 <?php include('includes/menu-bar.php');?>
-<!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
@@ -263,7 +258,6 @@ while($row=mysqli_fetch_array($query))
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	

@@ -70,30 +70,24 @@ header('location:my-wishlist.php');
 		<link href="assets/css/red.css" rel="alternate stylesheet" title="Red color">
 		<link href="assets/css/orange.css" rel="alternate stylesheet" title="Orange color">
 		<link href="assets/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
-		<!-- Demo Purpose Only. Should be removed in production : END -->
 
 		
-		<!-- Icons/Glyphs -->
+		
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-        <!-- Fonts --> 
+        
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="assets/images/favicon.ico">
 	</head>
     <body class="cnt-home">
 <header class="header-style-1">
 
-	<!-- ============================================== TOP MENU ============================================== -->
 <?php include('includes/top-header.php');?>
-<!-- ============================================== TOP MENU : END ============================================== -->
 <?php include('includes/main-header.php');?>
-	<!-- ============================================== NAVBAR ============================================== -->
 <?php include('includes/menu-bar.php');?>
-<!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
 
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
@@ -101,9 +95,9 @@ header('location:my-wishlist.php');
 				<li><a href="home.html">Inicio</a></li>
 				<li class='active'>Lista de Deseos</li>
 			</ul>
-		</div><!-- /.breadcrumb-inner -->
-	</div><!-- /.container -->
-</div><!-- /.breadcrumb -->
+		</div>
+	</div>
+</div>
 
 <div class="body-content outer-top-bd">
 	<div class="container">

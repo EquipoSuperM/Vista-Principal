@@ -29,7 +29,6 @@ Historial de pedidos</title>
 		<link rel="stylesheet" href="assets/css/rateit.css">
 		<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-		<!-- Demo Purpose Only. Should be removed in production -->
 		<link rel="stylesheet" href="assets/css/config.css">
 
 		<link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
@@ -58,13 +57,11 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 	
 		
 	
-		<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1">
 <?php include('includes/top-header.php');?>
 <?php include('includes/main-header.php');?>
 <?php include('includes/menu-bar.php');?>
 </header>
-<!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
@@ -72,9 +69,9 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 				<li><a href="#">Inicio</a></li>
 				<li class='active'>SuperM.com</li>
 			</ul>
-		</div><!-- /.breadcrumb-inner -->
-	</div><!-- /.container -->
-</div><!-- /.breadcrumb -->
+		</div>
+	</div>
+</div>
 
 <div class="body-content outer-top-xs">
 	<div class="container">
@@ -151,9 +148,8 @@ El ID de pedido o el ID de correo electrónico registrado no son válidos</td></
 		</div><!-- /.shopping-cart -->
 		</div> <!-- /.row -->
 		</form>
-		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-<?php echo include('includes/brands-slider.php');?>
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
+		<?php echo include('includes/brands-slider.php');?>
+	</div><!-- /.container -->
 </div><!-- /.body-content -->
 <?php include('includes/footer.php');?>
 
@@ -173,7 +169,6 @@ El ID de pedido o el ID de correo electrónico registrado no son válidos</td></
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
@@ -190,6 +185,5 @@ El ID de pedido o el ID de correo electrónico registrado no son válidos</td></
 		   $('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 </body>
 </html>
