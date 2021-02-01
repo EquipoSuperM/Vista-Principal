@@ -5,6 +5,12 @@
   .hola{
 	background:  #FFB039;
   }
+  .nav li a{
+    background:  #FFD856;
+  }
+  .nav li a:hover{
+    background-color:#434343;
+  }
   
     </style>
 

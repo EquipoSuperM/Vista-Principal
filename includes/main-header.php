@@ -26,7 +26,11 @@
   .main-header{
 	background:  #FFD856;
   }
-  
+  .carrito{
+	background:  #FFD856;
+  }
+
+
     </style>
 	<div class="main-header">
 		<div class="container">
@@ -61,8 +65,11 @@
 if(!empty($_SESSION['cart'])){
 	?>
 	<div class="dropdown dropdown-cart">
+	
 		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+		
 			<div class="items-cart-inner">
+			
 				<div class="total-price-basket">
 					<span class="lbl">Carrito -</span>
 					<span class="total-price">
@@ -134,6 +141,7 @@ if(!empty($_SESSION['cart'])){
 				
 		</li>
 		</ul><!-- /.dropdown-menu-->
+			
 	</div><!-- /.dropdown-cart -->
 <?php } else { ?>
 <div class="dropdown dropdown-cart">
