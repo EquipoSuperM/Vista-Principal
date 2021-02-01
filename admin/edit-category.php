@@ -54,7 +54,7 @@ $_SESSION['msg']="Category Updated !!";
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Genial!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Genial!Categoria Actualizada!!</strong>	
 									</div>
 <?php } ?>
 

@@ -7,7 +7,7 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-date_default_timezone_set('Asia/Kolkata');// change according timezone
+date_default_timezone_set('Asia/Kolkata');
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 
@@ -54,7 +54,7 @@ $_SESSION['msg']="Sub-Category Updated !!";
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Genial!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Genial!, Categoria Actualizada</strong>	
 									</div>
 <?php } ?>
 

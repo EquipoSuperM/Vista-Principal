@@ -64,7 +64,7 @@ $ret = mysqli_query($con,"SELECT * FROM ordertrackhistory WHERE orderId='$oid'")
       <td  class="fontkink"><?php echo $row['postingDate'];?></td>
     </tr>
      <tr height="20">
-      <td  class="fontkink1"><b>Status:</b></td>
+      <td  class="fontkink1"><b>Estado:</b></td>
       <td  class="fontkink"><?php echo $row['status'];?></td>
     </tr>
      <tr height="20">

@@ -80,7 +80,7 @@ $("#suggesstion-box").hide();
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Genial!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Genial!Producto Actualizado</strong>	
 									</div>
 <?php } ?>
 
@@ -89,7 +89,7 @@ $("#suggesstion-box").hide();
 {?>
 									<div class="alert alert-error">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Oh no!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
+									<strong>Oh no!Ha ocurrido un Error!!</strong> 	
 									</div>
 <?php } ?>
 

@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
 	$productimage1=$_FILES["productimage1"]["name"];
 	$productimage2=$_FILES["productimage2"]["name"];
 	$productimage3=$_FILES["productimage3"]["name"];
-//for getting product id
+
 $query=mysqli_query($con,"select max(id) as pid from products");
 	$result=mysqli_fetch_array($query);
 	 $productid=$result['pid']+1;
@@ -94,7 +94,7 @@ $("#suggesstion-box").hide();
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Genial!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Genial, Producto Agregado!</strong>	
 									</div>
 <?php } ?>
 
@@ -103,7 +103,7 @@ $("#suggesstion-box").hide();
 {?>
 									<div class="alert alert-error">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Oh no!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
+									<strong>Oh no!Ocurrio un Error, Falta algun Campo por Rellenar</strong> 	
 									</div>
 <?php } ?>
 
