@@ -13,10 +13,11 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		if(mysqli_num_rows($query_p)!=0){
 			$row_p=mysqli_fetch_array($query_p);
 			$_SESSION['cart'][$row_p['id']]=array("quantity" => 1, "price" => $row_p['productPrice']);
-						echo "<script>alert('Product has been added to the cart')</script>";
+						echo "<script>alert('El producto ha sido añadido al carrito.')</script>";
 		echo "<script type='text/javascript'> document.location ='my-cart.php'; </script>";
 		}else{
-			$message="Product ID is invalid";
+			$message="
+			El ID de producto no es válido";
 		}
 	}
 }
@@ -29,7 +30,8 @@ header('location:login.php');
 else
 {
 mysqli_query($con,"insert into wishlist(userId,productId) values('".$_SESSION['id']."','".$_GET['pid']."')");
-echo "<script>alert('Product aaded in wishlist');</script>";
+echo "<script>alert('
+Producto incluido en la lista de deseos');</script>";
 header('location:my-wishlist.php');
 
 }
@@ -47,7 +49,7 @@ header('location:my-wishlist.php');
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Product Category</title>
+	    <title>Categoria del Producto</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -132,12 +134,12 @@ while($row=mysqli_fetch_array($sql))
 </div>
 </div><!-- /.side-menu -->
 <!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
-	            	<h3 class="section-title">shop by</h3>
+	            	<h3 class="section-title">Categoria del Producto</h3>
 	            	<div class="sidebar-filter">
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
-		<h4 class="widget-title">Category</h4>
+		<h4 class="widget-title">Categoria</h4>
 	</div>
 	<div class="sidebar-widget-body m-t-10">
 	         <?php $sql=mysqli_query($con,"select id,categoryName  from category");
@@ -215,8 +217,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+					MXN. <?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
 			
@@ -230,9 +232,9 @@ while ($row=mysqli_fetch_array($ret))
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
-							<button class="btn btn-primary" type="button">Add to cart</button></a>
+							<button class="btn btn-primary" type="button">Añadir al carrito</button></a>
 								<?php } else {?>
-							<div class="action" style="color:red">Out of Stock</div>
+							<div class="action" style="color:red">Stock</div>
 					<?php } ?>
 													
 						</li>
@@ -252,7 +254,8 @@ while ($row=mysqli_fetch_array($ret))
 		</div>
 	  <?php } } else {?>
 	
-		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>No Product Found</h3>
+		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>
+Ningún producto encontrado</h3>
 		</div>
 		
 <?php } ?>	
