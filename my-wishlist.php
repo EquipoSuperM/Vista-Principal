@@ -7,7 +7,7 @@ if(strlen($_SESSION['login'])==0)
 header('location:login.php');
 }
 else{
-// Code forProduct deletion from  wishlist	
+	
 $wid=intval($_GET['del']);
 if(isset($_GET['del']))
 {
@@ -29,7 +29,8 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 header('location:my-wishlist.php');
 }
 		else{
-			$message="Product ID is invalid";
+			$message="
+			El ID de producto no es válido";
 		}
 	}
 }
@@ -47,7 +48,7 @@ header('location:my-wishlist.php');
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>My Wishlist</title>
+	    <title>Mi Lista de Deseos</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    
 	    <!-- Customizable CSS -->
@@ -97,8 +98,8 @@ header('location:my-wishlist.php');
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Wishlish</li>
+				<li><a href="home.html">CASA</a></li>
+				<li class='active'>Lista de Deseos</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -113,7 +114,7 @@ header('location:my-wishlist.php');
 		<table class="table">
 			<thead>
 				<tr>
-					<th colspan="4">my wishlist</th>
+					<th colspan="4">Mi Lista de Deseos</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -150,7 +151,7 @@ $num=mysqli_num_rows($rt);
 						</div>
 					</td>
 					<td class="col-md-2">
-						<a href="my-wishlist.php?page=product&action=add&id=<?php echo $row['pid']; ?>" class="btn-upper btn btn-primary">Add to cart</a>
+						<a href="my-wishlist.php?page=product&action=add&id=<?php echo $row['pid']; ?>" class="btn-upper btn btn-primary">Añadir al carrito</a>
 					</td>
 					<td class="col-md-2 close-btn">
 						<a href="my-wishlist.php?del=<?php echo htmlentities($row['wid']);?>" onClick="return confirm('Are you sure you want to delete?')" class=""><i class="fa fa-times"></i></a>
@@ -158,7 +159,8 @@ $num=mysqli_num_rows($rt);
 				</tr>
 				<?php } } else{ ?>
 				<tr>
-					<td style="font-size: 18px; font-weight:bold ">Your Wishlist is Empty</td>
+					<td style="font-size: 18px; font-weight:bold ">
+Tu lista de deseos Esta vacía</td>
 
 				</tr>
 				<?php } ?>
@@ -188,7 +190,7 @@ $num=mysqli_num_rows($rt);
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
+
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
