@@ -14,10 +14,11 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 			$_SESSION['cart'][$row_p['id']]=array("quantity" => 1, "price" => $row_p['productPrice']);
 		
 		}else{
-			$message="Product ID is invalid";
+			$message="
+			El ID de producto no es válido";
 		}
 	}
-		echo "<script>alert('Product has been added to the cart')</script>";
+		echo "<script>alert('El producto ha sido añadido al carrito.')</script>";
 		echo "<script type='text/javascript'> document.location ='my-cart.php'; </script>";
 }
 
@@ -26,6 +27,8 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
+	
 		<!-- Meta -->
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -35,7 +38,6 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>SuperM.com</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -84,13 +86,13 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		<div class="row">
 		
 			<div class="col-xs-12 col-sm-12 col-md-3 sidebar">
-				<!-- ================================== TOP NAVIGATION ================================== -->
+				<!-- ================================== tOP nAVEGACION ================================== -->
 	<?php include('includes/side-menu.php');?>
-<!-- ================================== TOP NAVIGATION : END ================================== -->
+<!-- ================================== TOP NAVIGAcION : END ================================== -->
 			</div><!-- /.sidemenu-holder -->	
 			
 			<div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder">
-				<!-- ========================================== SECTION – HERO ========================================= -->
+				<!-- ========================================== Seccion– HERO ========================================= -->
 			
 <div id="hero" class="homepage-slider3">
 	<div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
@@ -120,10 +122,10 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 						     <i class="icon fa fa-dollar"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading green">money back</h4>
+							<h4 class="info-box-heading green">Devolución de dinero</h4>
 						</div>
 					</div>	
-					<h6 class="text">30 Day Money Back Guarantee.</h6>
+					<h6 class="text">30 dias 50%</h6>
 				</div>
 			</div><!-- .col -->
 
@@ -134,10 +136,10 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<i class="icon fa fa-truck"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading orange">free shipping</h4>
+							<h4 class="info-box-heading orange">Gratis </h4>
 						</div>
 					</div>
-					<h6 class="text">free ship-on oder over Rs. 600.00</h6>	
+					<h6 class="text">Envío gratis $ 600.00</h6>	
 				</div>
 			</div><!-- .col -->
 
@@ -148,10 +150,10 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<i class="icon fa fa-gift"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading red">Special Sale</h4>
+							<h4 class="info-box-heading red">Ofertas</h4>
 						</div>
 					</div>
-					<h6 class="text">All items-sale up to 20% off </h6>	
+					<h6 class="text">20% </h6>	
 				</div>
 			</div><!-- .col -->
 		</div><!-- /.row -->
@@ -166,11 +168,11 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		<!-- ============================================== SCROLL TABS ============================================== -->
 		<div id="product-tabs-slider" class="scroll-tabs inner-bottom-vs  wow fadeInUp">
 			<div class="more-info-tab clearfix">
-			   <h3 class="new-product-title pull-left">Featured Products</h3>
+			   <h3 class="new-product-title pull-left">Productos Destacados</h3>
 				<ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
-					<li class="active"><a href="#all" data-toggle="tab">All</a></li>
-					<li><a href="#books" data-toggle="tab">Books</a></li>
-					<li><a href="#furniture" data-toggle="tab">Furniture</a></li>
+					<li class="active"><a href="#all" data-toggle="tab">Todas</a></li>
+					<li><a href="#books" data-toggle="tab"></a></li>
+					
 				</ul><!-- /.nav-tabs -->
 			</div>
 
@@ -209,16 +211,16 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs.<?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?>	</span>
+				MXN.<?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?>	</span>
 									
 			</div><!-- /.product-price -->
 			
 		</div><!-- /.product-info -->
 		<?php if($row['productAvailability']=='In Stock'){?>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a></div>
 				<?php } else {?>
-						<div class="action" style="color:red">Out of Stock</div>
+						<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
 			</div><!-- /.product -->
       
@@ -267,16 +269,16 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+				MXN.<?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
 			
 		</div><!-- /.product-info -->
 				<?php if($row['productAvailability']=='In Stock'){?>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a></div>
 				<?php } else {?>
-						<div class="action" style="color:red">Out of Stock</div>
+						<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
 			</div><!-- /.product -->
       
@@ -325,16 +327,16 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs.<?php echo htmlentities($row['productPrice']);?>			</span>
+				MXN.<?php echo htmlentities($row['productPrice']);?>			</span>
 										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div>
 			
 		</div>
 				<?php if($row['productAvailability']=='In Stock'){?>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a></div>
 				<?php } else {?>
-						<div class="action" style="color:red">Out of Stock</div>
+						<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
 			</div>
       
@@ -355,7 +357,7 @@ while ($row=mysqli_fetch_array($ret))
 				<div class="row">
 					<div class="col-md-6">
 	                   <section class="section">
-	                   	<h3 class="section-title">Smart Phones</h3>
+	                   	<h3 class="section-title"></h3>
 	                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	   
 <?php
@@ -384,16 +386,16 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
+				MXN.<?php echo htmlentities($row['productPrice']);?>			</span>
 										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div>
 			
 		</div>
 				<?php if($row['productAvailability']=='In Stock'){?>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a></div>
 				<?php } else {?>
-						<div class="action" style="color:red">Out of Stock</div>
+						<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
 			</div>
 			</div>
@@ -406,7 +408,7 @@ while ($row=mysqli_fetch_array($ret))
 					</div>
 					<div class="col-md-6">
 						<section class="section">
-							<h3 class="section-title">Laptops</h3>
+							<h3 class="section-title"></h3>
 		                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	<?php
 $ret=mysqli_query($con,"select * from products where category=4 and subCategory=6");
@@ -434,16 +436,16 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs .<?php echo htmlentities($row['productPrice']);?>			</span>
+				MXN.<?php echo htmlentities($row['productPrice']);?>			</span>
 										     <span class="price-before-discount">MXN.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div>
 			
 		</div>
 				<?php if($row['productAvailability']=='In Stock'){?>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a></div>
 				<?php } else {?>
-						<div class="action" style="color:red">Out of Stock</div>
+						<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
 			</div>
 			</div>
@@ -463,7 +465,7 @@ while ($row=mysqli_fetch_array($ret))
 		
 
 	<section class="section featured-product inner-xs wow fadeInUp">
-		<h3 class="section-title">Fashion</h3>
+		<h3 class="section-title"></h3>
 		<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
 			<?php
 $ret=mysqli_query($con,"select * from products where category=6");
@@ -499,14 +501,14 @@ while ($row=mysqli_fetch_array($ret))
 											<div class="rating rateit-small"></div>
 											<div class="product-price">	
 												<span class="price">
-													Rs. <?php echo htmlentities($row['productPrice']);?>
+													MXN. <?php echo htmlentities($row['productPrice']);?>
 												</span>
 
 											</div><!-- /.product-price -->
 										<?php if($row['productAvailability']=='In Stock'){?>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a></div>
 				<?php } else {?>
-						<div class="action" style="color:red">Out of Stock</div>
+						<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
 										</div>
 									</div><!-- /.col -->
