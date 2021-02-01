@@ -126,7 +126,7 @@ if(!empty($_SESSION['cart'])){
 				<div class="total-price-basket">
 					<span class="lbl">cart -</span>
 					<span class="total-price">
-						<span class="sign">Rs.</span>
+						<span class="sign">MNX.</span>
 						<span class="value">00.00</span>
 					</span>
 				</div>
