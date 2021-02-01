@@ -148,7 +148,7 @@ La dirección de envío se ha actualizado');</script>";
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">CASA</a></li>
+				<li><a href="#">Inicio</a></li>
 				<li class='active'>Carrito de compras</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->

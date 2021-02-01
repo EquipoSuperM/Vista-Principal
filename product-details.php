@@ -107,7 +107,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 
 
 			<ul class="list-inline list-unstyled">
-				<li><a href="index.php">CASA</a></li>
+				<li><a href="index.php">Inicio</a></li>
 				<li><?php echo htmlentities($rw['catname']);?></a></li>
 				<li><?php echo htmlentities($rw['subcatname']);?></li>
 				<li class='active'><?php echo htmlentities($rw['pname']);?></li>
@@ -589,7 +589,8 @@ while($rvw=mysqli_fetch_array($qry))
 			$subcid=$row['subCategory']; } ?>
 				<!-- ============================================== UPSELL PRODUCTS ============================================== -->
 <section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">Realted Products </h3>
+	<h3 class="section-title">
+Productos relacionados </h3>
 	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
 	   
 		<?php 
