@@ -7,13 +7,11 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-	$pid=intval($_GET['id']);// product id
+	$pid=intval($_GET['id']);
 if(isset($_POST['submit']))
 {
 	$productname=$_POST['productName'];
 	$productimage1=$_FILES["productimage1"]["name"];
-//$dir="productimages";
-//unlink($dir.'/'.$pimage);
 
 
 	move_uploaded_file($_FILES["productimage1"]["tmp_name"],"productimages/$pid/".$_FILES["productimage1"]["name"]);
@@ -77,7 +75,7 @@ $("#suggesstion-box").hide();
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Genial!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Genial, Imagen Cargada Correctamente!</strong>	
 									</div>
 <?php } ?>
 
@@ -128,7 +126,7 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Update</button>
+												<button type="submit" name="submit" class="btn">Actualizar</button>
 											</div>
 										</div>
 									</form>
