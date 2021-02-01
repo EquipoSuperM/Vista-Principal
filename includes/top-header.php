@@ -2,7 +2,15 @@
 //session_start();
 
 ?>
-
+<style type="text/css">
+  
+  .cnt-account{
+    background: #FFD856; 
+  }
+  .top-bar animate-dropdown{
+	background:  #FFB039;
+  }
+    </style>
 <div class="top-bar animate-dropdown">
 	<div class="container">
 		<div class="header-top-inner">
@@ -11,19 +19,19 @@
 
 <?php if(strlen($_SESSION['login']))
     {   ?>
-				<li><a href="#"><i class="icon fa fa-user"></i>Welcome -<?php echo htmlentities($_SESSION['username']);?></a></li>
+				<li><a href="#"><i class="icon fa fa-user"></i>Bienvenidos -<?php echo htmlentities($_SESSION['username']);?></a></li>
 				<?php } ?>
 
-					<li><a href="my-account.php"><i class="icon fa fa-user"></i>My Account</a></li>
-					<li><a href="my-wishlist.php"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-					<li><a href="my-cart.php"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
+					<li><a href="my-account.php"><i class="icon fa fa-user"></i>Mi cuenta</a></li>
+					<li><a href="my-wishlist.php"><i class="icon fa fa-heart"></i>Lista de deseos</a></li>
+					<li><a href="my-cart.php"><i class="icon fa fa-shopping-cart"></i>Mi carrito</a></li>
 					<?php if(strlen($_SESSION['login'])==0)
     {   ?>
-<li><a href="login.php"><i class="icon fa fa-sign-in"></i>Login</a></li>
+                    <li><a href="login.php"><i class="icon fa fa-sign-in"></i>Iniciar</a></li>
 <?php }
 else{ ?>
 	
-				<li><a href="logout.php"><i class="icon fa fa-sign-out"></i>Logout</a></li>
+			    	<li><a href="logout.php"><i class="icon fa fa-sign-out"></i>Cerrar sesión</a></li>
 				<?php } ?>	
 				</ul>
 			</div><!-- /.cnt-account -->
@@ -31,7 +39,7 @@ else{ ?>
 <div class="cnt-block">
 				<ul class="list-unstyled list-inline">
 					<li class="dropdown dropdown-small">
-						<a href="track-orders.php" class="dropdown-toggle" ><span class="key">Track Order</b></a>
+						<a href="track-orders.php" class="dropdown-toggle" ><span class="key">Orden de Pedidos</b></a>
 						
 					</li>
 
