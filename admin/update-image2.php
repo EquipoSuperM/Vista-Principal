@@ -7,14 +7,13 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-	$pid=intval($_GET['id']);// product id
+	$pid=intval($_GET['id']);
 if(isset($_POST['submit']))
 {
 	$productname=$_POST['productName'];
 	$productimage2=$_FILES["productimage2"]["name"];
 
-//dir="productimages";
-//unlink($dir.'/'.$pimage);
+
 
 
 	move_uploaded_file($_FILES["productimage2"]["tmp_name"],"productimages/$pid/".$_FILES["productimage2"]["name"]);
@@ -30,7 +29,7 @@ $_SESSION['msg']="Product Image Updated Successfully !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Update Product Image</title>
+	<title>Administrador| Cargar Imagen 2</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -70,7 +69,7 @@ $("#suggesstion-box").hide();
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Update Product Image 2</h3>
+								<h3>Cargar imagen </h3>
 							</div>
 							<div class="module-body">
 
@@ -101,7 +100,7 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Name</label>
+<label class="control-label" for="basicinput">Nombre del producto</label>
 <div class="controls">
 <input type="text"    name="productName"  readonly value="<?php echo htmlentities($row['productName']);?>" class="span8 tip" required>
 </div>
@@ -109,7 +108,7 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Current Product Image1</label>
+<label class="control-label" for="basicinput">Imagen actual</label>
 <div class="controls">
 <img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage2']);?>" width="200" height="100"> 
 </div>
@@ -118,7 +117,7 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">New Product Image2</label>
+<label class="control-label" for="basicinput">Nueva imagen</label>
 <div class="controls">
 <input type="file" name="productimage2" id="productimage2" value="" class="span8 tip" required>
 </div>
@@ -140,11 +139,11 @@ while($row=mysqli_fetch_array($query))
 	
 						
 						
-					</div><!--/.content-->
-				</div><!--/.span9-->
+					</div>
+				</div>
 			</div>
-		</div><!--/.container-->
-	</div><!--/.wrapper-->
+		</div>
+	</div>
 
 <?php include('include/footer.php');?>
 

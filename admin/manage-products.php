@@ -7,7 +7,7 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-date_default_timezone_set('Asia/Kolkata');// change according timezone
+date_default_timezone_set('Asia/Kolkata');
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 if(isset($_GET['del']))
@@ -22,7 +22,7 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Manage Products</title>
+	<title>Administracion| Administrar Productos</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -41,7 +41,7 @@ if(isset($_GET['del']))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Manage Products</h3>
+								<h3>Administrar Productos</h3>
 							</div>
 							<div class="module-body table">
 	<?php if(isset($_GET['del']))
@@ -59,12 +59,12 @@ if(isset($_GET['del']))
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Product Name</th>
-											<th>Category </th>
-											<th>Subcategory</th>
-											<th>Company Name</th>
-											<th>Product Creation Date</th>
-											<th>Action</th>
+											<th>Nombre del Producto</th>
+											<th>Categoria </th>
+											<th>Sub-categoria</th>
+											<th>Marca</th>
+											<th>Fecha de Registro</th>
+											<th>Opcion</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -93,11 +93,11 @@ while($row=mysqli_fetch_array($query))
 
 						
 						
-					</div><!--/.content-->
-				</div><!--/.span9-->
+					</div>
+				</div>
 			</div>
-		</div><!--/.container-->
-	</div><!--/.wrapper-->
+		</div>
+	</div>
 
 <?php include('include/footer.php');?>
 

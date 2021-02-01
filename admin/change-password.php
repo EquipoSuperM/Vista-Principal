@@ -7,7 +7,7 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-date_default_timezone_set('America/Mexico');// change according timezone
+//date_default_timezone_set('America/Mexico');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 
@@ -31,7 +31,7 @@ $_SESSION['msg']="Old Password not match !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Change Password</title>
+	<title>Administrador| Cambiar contraseña</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -80,7 +80,7 @@ return true;
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Admin Change Password</h3>
+								<h3>Cambiar contraseña de administrador</h3>
 							</div>
 							<div class="module-body">
 
@@ -96,24 +96,24 @@ return true;
 			<form class="form-horizontal row-fluid" name="chngpwd" method="post" onSubmit="return valid();">
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">Current Password</label>
+<label class="control-label" for="basicinput">Contraseña actual</label>
 <div class="controls">
-<input type="password" placeholder="Enter your current Password"  name="password" class="span8 tip" required>
+<input type="password" placeholder="Ingrese su contraseña actual"  name="password" class="span8 tip" required>
 </div>
 </div>
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">New Password</label>
+<label class="control-label" for="basicinput">Nueva contraseña</label>
 <div class="controls">
-<input type="password" placeholder="Enter your new current Password"  name="newpassword" class="span8 tip" required>
+<input type="password" placeholder="Introduza su nueva contraseña"  name="newpassword" class="span8 tip" required>
 </div>
 </div>
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Current Password</label>
+<label class="control-label" for="basicinput">Confirmar contraseña</label>
 <div class="controls">
-<input type="password" placeholder="Enter your new Password again"  name="confirmpassword" class="span8 tip" required>
+<input type="password" placeholder="Ingrese nuevamente su contraseña nueva"  name="confirmpassword" class="span8 tip" required>
 </div>
 </div>
 
@@ -124,7 +124,7 @@ return true;
 
 										<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Submit</button>
+												<button type="submit" name="submit" class="btn">Guardar</button>
 											</div>
 										</div>
 									</form>
@@ -133,11 +133,11 @@ return true;
 
 						
 						
-					</div><!--/.content-->
-				</div><!--/.span9-->
+					</div>
+				</div>
 			</div>
-		</div><!--/.container-->
-	</div><!--/.wrapper-->
+		</div>
+	</div>
 
 <?php include('include/footer.php');?>
 

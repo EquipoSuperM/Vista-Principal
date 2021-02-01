@@ -4,8 +4,8 @@ error_reporting(0);
 include("include/config.php");
 if(isset($_POST['submit']))
 {
-	$username=$_POST['Usuario'];
-	$password=md5($_POST['contraseña']);
+	$username=$_POST['username'];
+	$password=md5($_POST['password']);
 $ret=mysqli_query($con,"SELECT * FROM admin WHERE username='$username' and password='$password'");
 $num=mysqli_fetch_array($ret);
 if($num>0)
@@ -35,7 +35,7 @@ exit();
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shopping Portal | Admin login</title>
+	<title>SuperM.com | Inicio de sesión de administrador</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -52,15 +52,15 @@ exit();
 				</a>
 
 			  	<a class="brand" href="index.html">
-			  		Shopping Portal | Admin
+			  		SuperM.com | Administrador
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 				
 					<ul class="nav pull-right">
 
-						<li><a href="http://localhost/shopping/">
-						Back to Portal
+						<li><a href="">
+						Ir a  SuperM.com
 						
 						</a></li>
 
@@ -68,10 +68,10 @@ exit();
 
 						
 					</ul>
-				</div><!-- /.nav-collapse -->
+				</div>
 			</div>
-		</div><!-- /navbar-inner -->
-	</div><!-- /navbar -->
+		</div>
+	</div>
 
 
 
@@ -81,7 +81,7 @@ exit();
 				<div class="module module-login span4 offset4">
 					<form class="form-vertical" method="post">
 						<div class="module-head">
-							<h3>Sign In</h3>
+							<h3>Registrarse</h3>
 						</div>
 						<span style="color:red;" ><?php echo htmlentities($_SESSION['errmsg']); ?><?php echo htmlentities($_SESSION['errmsg']="");?></span>
 						<div class="module-body">
@@ -99,7 +99,7 @@ exit();
 						<div class="module-foot">
 							<div class="control-group">
 								<div class="controls clearfix">
-									<button type="submit" class="btn btn-primary pull-right" name="submit">Login</button>
+									<button type="submit" class="btn btn-primary pull-right" name="submit">Iniciar Sesión</button>
 									
 								</div>
 							</div>
@@ -108,13 +108,13 @@ exit();
 				</div>
 			</div>
 		</div>
-	</div><!--/.wrapper-->
+	</div>
 
 	<div class="footer">
 		<div class="container">
 			 
 
-			<b class="copyright">&copy; 2020 Shopping Portal by CampCodes</b> All rights reserved.
+			<b class="copyright">&copy; 2021 SuperM.com</b>
 		</div>
 	</div>
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

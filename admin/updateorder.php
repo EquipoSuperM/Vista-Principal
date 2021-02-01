@@ -33,7 +33,7 @@ window.print();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Update Compliant</title>
+<title>Actualizacion del pedido</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <link href="anuj.css" rel="stylesheet" type="text/css">
 </head>
@@ -44,11 +44,11 @@ window.print();
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
     <tr height="50">
-      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Update Order !</b></div></td>
+      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Actualizacion del pedido !</b></div></td>
       
     </tr>
     <tr height="30">
-      <td  class="fontkink1"><b>order Id:</b></td>
+      <td  class="fontkink1"><b> Id del pedido:</b></td>
       <td  class="fontkink"><?php echo $oid;?></td>
     </tr>
     <?php 
@@ -96,8 +96,8 @@ $st='Delivered';
       <td  class="fontkink"><span class="fontkink1" >
         <select name="status" class="fontkink" required="required" >
           <option value="">Select Status</option>
-                 <option value="in Process">In Process</option>
-                  <option value="Delivered">Delivered</option>
+                 <option value="in Process">En proceso</option>
+                  <option value="Delivered">Entregado</option>
         </select>
         </span></td>
     </tr>

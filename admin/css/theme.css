@@ -1,19 +1,13 @@
-/*
 
-Edming Admin Template
-EGrappler.com
-All Rights Reserved.
-
-*/
 
 body {
 	font-size: 13px;
 	font-family: 'Open Sans', Arial, sans-serif;
 	background: rgb(240, 120, 7);
-	color: #777
+	color: rgb(250, 0, 0)
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #333;
+	color: rgb(0, 0, 0);
 	margin-top: 0
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -424,7 +418,6 @@ transition: all .2s ease-in-out;
 
 
 
-/* Buttons */
 
 
 .btn {
@@ -1112,7 +1105,7 @@ border-top-left-radius: 3px;
 	padding: 0
 }
 .stream.new-update a, .stream.load-more a {
-	background: #background: #f7f7f7;;
+	background: #background: #f7f7f7;
 	
 	color: #555;
 	font-weight: 600;
@@ -1120,7 +1113,7 @@ border-top-left-radius: 3px;
 	display: block;
 	padding: 20px;
 	text-align: center;
-	text-decoration: none!important
+	text-decoration: none!important;
 }
 .stream.new-update a i, .stream.load-more a i {
 	font-size: 18px;

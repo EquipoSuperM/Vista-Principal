@@ -18,7 +18,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Pending Orders</title>
+	<title>Administracion| Pedidos Pendientes</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -49,7 +49,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Pending Orders</h3>
+								<h3>Pedidos Pendientes</h3>
 							</div>
 							<div class="module-body table">
 	<?php if(isset($_GET['del']))
@@ -67,14 +67,14 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 									<thead>
 										<tr>
 											<th>#</th>
-											<th> Name</th>
-											<th width="50">Email /Contact no</th>
-											<th>Shipping Address</th>
-											<th>Product </th>
-											<th>Qty </th>
-											<th>Amount </th>
-											<th>Order Date</th>
-											<th>Action</th>
+											<th> Nombre</th>
+											<th width="50">Correo /N° de Contacto</th>
+											<th>Direccion del envio</th>
+											<th>Producto </th>
+											<th>Cantidad</th>
+											<th>Precio </th>
+											<th>Fecha del pedido</th>
+											<th>Opciones</th>
 											
 										
 										</tr>
@@ -109,11 +109,11 @@ while($row=mysqli_fetch_array($query))
 
 						
 						
-					</div><!--/.content-->
-				</div><!--/.span9-->
+					</div>
+				</div>
 			</div>
-		</div><!--/.container-->
-	</div><!--/.wrapper-->
+		</div>
+	</div>
 
 <?php include('include/footer.php');?>
 

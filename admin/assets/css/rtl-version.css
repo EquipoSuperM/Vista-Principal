@@ -102,15 +102,11 @@ body.login input.password {
 	padding-left: 130px;
 	padding-right: 25px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Generic Classes
- /* ---------------------------------------------------------------------- */
+
 body.rtl .close {
 	float: left;
 }
-/* ---------------------------------------------------------------------- */
-/*  Navbar and navbar elements
- /* ---------------------------------------------------------------------- */
+
 body.rtl .navbar-tools > ul {
 	float: left !important;
 }
@@ -136,9 +132,7 @@ body.rtl .navbar-tools > ul > li.dropdown .dropdown-toggle .badge {
 	left: 24px;
 	right: auto;
 }
-/* ---------------------------------------------------------------------- */
-/*	Search Box
- /* ---------------------------------------------------------------------- */
+
 body.rtl .search-box {
 	float: left;
 }
@@ -151,9 +145,7 @@ body.rtl .sidebar-search .form-group button {
 	right: auto;
 	left: 4px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Buttons
- /* ---------------------------------------------------------------------- */
+
 body.rtl .btn-icon .badge {
 	left: -5px;
 	right: auto;
@@ -194,9 +186,7 @@ body.rtl .btn-group .btn + .btn, body.rtl .btn-group .btn + .btn-group, body.rtl
 	margin-left: 0;
 	margin-right: -1px;
 }
-/* ---------------------------------------------------------------------- */
-/*	Panel Tools
- /* ---------------------------------------------------------------------- */
+
 body.rtl .panel-tools {
 	position: absolute;
 	right: auto;
