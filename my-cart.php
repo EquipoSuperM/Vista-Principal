@@ -184,7 +184,7 @@ if(!empty($_SESSION['cart'])){
 						<div class="shopping-cart-btn">
 							<span class="">
 								<a href="index.php" class="btn btn-upper btn-primary outer-left-xs">Seguir Comprando</a>
-								<input type="submit" name="submit" value="Update shopping cart" class="btn btn-upper btn-primary pull-right outer-right-xs">
+								<input type="submit" name="submit" value="Actualizar carrito de compras" class="btn btn-upper btn-primary pull-right outer-right-xs">
 							</span>
 						</div><!-- /.shopping-cart-btn -->
 					</td>
@@ -234,7 +234,7 @@ $num=mysqli_num_rows($rt);
 {
 ?>
 								<div class="reviews">
-									( <?php echo htmlentities($num);?> Reviews )
+									( <?php echo htmlentities($num);?> Reseña )
 								</div>
 								<?php } ?>
 							</div>
@@ -251,10 +251,10 @@ $num=mysqli_num_rows($rt);
 				             
 			              </div>
 		            </td>
-					<td class="cart-product-sub-total"><span class="cart-sub-total-price"><?php echo "Rs"." ".$row['productPrice']; ?>.00</span></td>
-<td class="cart-product-sub-total"><span class="cart-sub-total-price"><?php echo "Rs"." ".$row['shippingCharge']; ?>.00</span></td>
+					<td class="cart-product-sub-total"><span class="cart-sub-total-price"><?php echo "MXN"." ".$row['productPrice']; ?>.00</span></td>
+<td class="cart-product-sub-total"><span class="cart-sub-total-price"><?php echo "MXN"." ".$row['shippingCharge']; ?>.00</span></td>
 
-					<td class="cart-product-grand-total"><span class="cart-grand-total-price"><?php echo ($_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge']); ?>.00</span></td>
+					<td class="cart-product-grand-total"><span class="cart-grand-total-price"><?php echo "MXN ".($_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge']); ?>.00</span></td>
 				</tr>
 
 				<?php } }
