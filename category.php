@@ -48,7 +48,7 @@ header('location:my-wishlist.php');
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Product Category</title>
+	    <title>Categoria de Producto</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -58,13 +58,11 @@ header('location:my-wishlist.php');
 	    <link rel="stylesheet" href="assets/css/green.css">
 	    <link rel="stylesheet" href="assets/css/owl.carousel.css">
 		<link rel="stylesheet" href="assets/css/owl.transitions.css">
-		<!--<link rel="stylesheet" href="assets/css/owl.theme.css">-->
 		<link href="assets/css/lightbox.css" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/animate.min.css">
 		<link rel="stylesheet" href="assets/css/rateit.css">
 		<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-		<!-- Demo Purpose Only. Should be removed in production -->
 		<link rel="stylesheet" href="assets/css/config.css">
 
 		<link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
@@ -84,18 +82,14 @@ header('location:my-wishlist.php');
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon.ico">
 
-		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
+
 
 	</head>
     <body class="cnt-home">
 	
 <header class="header-style-1">
 
-	<!-- ============================================== TOP MENU ============================================== -->
+
 <?php include('includes/top-header.php');?>
 <!-- ============================================== TOP MENU : END ============================================== -->
 <?php include('includes/main-header.php');?>
@@ -113,7 +107,7 @@ header('location:my-wishlist.php');
 	            <!-- ================================== TOP NAVIGATION ================================== -->
 <div class="side-menu animate-dropdown outer-bottom-xs">       
 <div class="side-menu animate-dropdown outer-bottom-xs">
-    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categorias</div>        
+    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Subcategorías</div>        
     <nav class="yamm megamenu-horizontal" role="navigation">
   
         <ul class="nav">
@@ -132,10 +126,10 @@ while($row=mysqli_fetch_array($sql))
     </nav>
 </div>
 </div><!-- /.side-menu -->
-<!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
-	            	<h3 class="section-title">shop by</h3>
+         <div class="sidebar-module-container">
+	            	<h3 class="section-title">Comprar por</h3>
 	            	<div class="sidebar-filter">
-		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
+		            	<!-- ============================================== SIDEBAR CATEGORIA ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
 		<h4 class="widget-title">Categoria</h4>
@@ -224,8 +218,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs. <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+					MXN. <?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">MXN. <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
 			
@@ -242,7 +236,7 @@ while ($row=mysqli_fetch_array($ret))
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
 							<button class="btn btn-primary" type="button">Agregar al carrito</button></a>
 								<?php } else {?>
-							<div class="action" style="color:red">Out of Stock</div>
+							<div class="action" style="color:red">Agotado</div>
 					<?php } ?>
 													
 						</li>
